@@ -342,7 +342,11 @@ function recolor(modelData) {
 		}
 	}
 	for(const snapshot of snapshots) {
+		console.log("Preparing to to recolor faces of snapshots[ " + snapshot + " ]");
 		const ss = modelData.snapshots[snapshot];
+		if(!ss || ss.length == 0) {
+			console.log("Snapshot named " + snapshot + " was not found.");
+		}
 		for(let i = 0; i < ss.length; i++) {
 			const item = ss[i];
 			const shapeGuid = item.shape;
@@ -350,6 +354,8 @@ function recolor(modelData) {
 			const newColor = shapeColors.get(nVertices);
 			if(newColor) {
 				modelData.snapshots[snapshot][i].color = newColor;
+			} else {
+				console.log("\t\t" + shapeGuid + " skipped - no color found for " + nVertices + " vertices");
 			}
 		}
 	}
@@ -362,12 +368,26 @@ function getFaceSceneSnapshots(modelData) {
 	const url = viewer.src;
 	const facescenes = [];
 	for(const model of models) {
+		const skip = model.skip == "true";
 		if(model.url == url) {
+			if(skip) {
+				console.log("Skipping 'Dual' and 'Combined' facescenes for " + model.title + ". (" + model.catalan + ")" );
+			}
 			facescenes.push(model.facescene);
+			if(!skip) {
+				// Include these two hard coded variants for the Catalans
+				facescenes.push("Dual " + model.facescene);
+				facescenes.push("Combined " + model.facescene);
+			}
 			if(model.field.toLowerCase().startsWith("snub")) {
 				// For Archimedean snub fields, 
-				// the edgescene are supposed to have the chiral twin of facescene instead of struts
+				// The edgescene is supposed to have the chiral twin of facescene instead of struts
 				facescenes.push(model.edgescene);
+				if(!skip) {
+					// Include these two hard coded variants for the Catalans
+					facescenes.push("Dual " + model.edgescene);
+					facescenes.push("Combined " + model.edgescene);
+				}
 			}
 		}
 	}
