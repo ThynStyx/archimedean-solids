@@ -401,7 +401,7 @@ let aId = parseInt(searchParams.get("A")); // upper case
 if(Number.isNaN(aId)) {
 	aId = parseInt(searchParams.get("a")); // lower case
 }
-if(aId >= 1 && aId <= 15) {
+if(aId >= 1 && aId <= tbody.rows.length) {
 	initialId = aId;
 }
 const initialRow = tbody.rows[ initialId - 1 ];
@@ -416,7 +416,7 @@ showEdges.addEventListener("change", // use "change" rather than "click" for a c
 // Add the handler to snubSwitch (the parent div) rather than showChiralTwin (the button itself)
 // so that the user can click anywhere on the div when the background color changes, not just on the button.
 // This isn't necessary on the showEdges checkbox
-snubSwitch.addEventListener("click", // use "click" rather han "change" for a button or a div
+snubSwitch.addEventListener("click", // use "click" rather than "change" for a button or a div
   () => {
 	whichChiralTwin = !whichChiralTwin;
     setScene(selectedRow.dataset);
