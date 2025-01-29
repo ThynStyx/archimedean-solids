@@ -117,6 +117,11 @@ input[type=checkbox]
   padding: 2px;
 }
 
+div.radio {
+    /* TODO: Need better styling here */
+    display:inline;
+}
+
 #showEdges, #showChiralTwin {
   background-color: transparent;
   background: none;

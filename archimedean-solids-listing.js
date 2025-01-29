@@ -3,6 +3,7 @@ import { models } from './archimedean-solids-models.js';
 let camera = true;
 let whichChiralTwin = false;
 let selectedRow;
+let selectedType = "A";
 const searchParams = new URL(document.location).searchParams;
 const table = document.getElementById( "partsTable" );
 const tbody = table.createTBody();
@@ -421,6 +422,17 @@ snubSwitch.addEventListener("click", // use "click" rather than "change" for a b
 	whichChiralTwin = !whichChiralTwin;
     setScene(selectedRow.dataset);
   } );
+
+// use "click" rather than "change" for each radio button
+document.getElementsByName("solid-type").forEach(rb => rb.addEventListener("click", 
+  e => {
+	if(selectedType != e.target.value) {
+	  console.log("selectedType changed from " + selectedType + " to " + e.target.value);
+	  selectedType = e.target.value;
+      setScene(selectedRow.dataset);
+	}
+  }
+) );
 
 function selectArchimedeanSolid( asolid, tr ) {
 	if(tr != selectedRow) {
