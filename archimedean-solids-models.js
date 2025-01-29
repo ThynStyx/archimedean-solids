@@ -1,5 +1,5 @@
 export const models = [
-  { id: 1, field:"Golden",    edgescene:"Edges", facescene:"Faces", zometool:"true",  title:"Truncated Tetrahedron",          catalan:"Triakis Tetrahedron",         zomedual:"true" , skip:"true", url:"uploads/david-hall/Truncated-Tetrahedron.vZome"},
+  { id: 1, field:"Golden",    edgescene:"Edges", facescene:"Faces", zometool:"true",  title:"Truncated Tetrahedron",          catalan:"Triakis Tetrahedron",         zomedual:"false",              url:"uploads/david-hall/Truncated-Tetrahedron.vZome"},
   { id: 2, field:"Root2",     edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Truncated Cube",                 catalan:"Triakis Octahedron",          zomedual:"false", skip:"true", url:"uploads/ThynStyx/Root2-Truncated-Cube-ONLINE.vZome"},
   { id: 3, field:"Golden",    edgescene:"Edges", facescene:"Faces", zometool:"true",  title:"Truncated Octahedron",           catalan:"Tetrakis Hexahedron",         zomedual:"false",              url:"uploads/david-hall/Truncated-Octahedron.vZome"},
   { id: 4, field:"Golden",    edgescene:"Edges", facescene:"Faces", zometool:"true",  title:"Truncated Dodecahedron",         catalan:"Triakis Icosahedron",         zomedual:"false", skip:"true", url:"uploads/ThynStyx/Golden-Truncated-Dodecahedron-ONLINE.vZome"},
