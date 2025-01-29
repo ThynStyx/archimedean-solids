@@ -12,4 +12,7 @@ export const models = [
   { id:11, field:"Golden",    edgescene:"Edges", facescene:"Faces", zometool:"true",  title:"Truncated Icosidodecahedron", url:"uploads/ThynStyx/Golden-Truncated-Icosidodecahedron-ONLINE.vZome"},
   { id:12, field:"snubCube",  edgescene:"Dextro Faces", facescene:"Laevo Faces", zometool:"false", title:"Snub Cube",         url:"uploads/david-hall/SnubCubes.vZome"},
   { id:13, field:"snubDodec", edgescene:"Dextro Faces", facescene:"Laevo Faces", zometool:"false", title:"Snub Dodecahedron", url:"uploads/david-hall/SnubDodecs.vZome"},
+ 
+  { id:14, field:"Golden", edgescene:"Dual Edges",     facescene:"Dual Faces",     zometool:"false", type:"catalan", title:"Tetrakis Hexahedron",         url:"uploads/david-hall/Truncated-Octahedron.vZome"},
+  { id:15, field:"Golden", edgescene:"Combined Edges", facescene:"Combined Faces", zometool:"false", type:"duals",   title:"Truncated Octahedron + Dual", url:"uploads/david-hall/Truncated-Octahedron.vZome"},
   ]

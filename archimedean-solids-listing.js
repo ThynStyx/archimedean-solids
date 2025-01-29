@@ -431,28 +431,34 @@ function selectArchimedeanSolid( asolid, tr ) {
 		  }
 		  selectedRow = tr;
 		  selectedRow.className = "selected";
-		  document.getElementById( "index" ).textContent = "A" +id;
+		  document.getElementById( "index" ).textContent = getPrefix(asolid.type) +id;
 		  switchModel(asolid);
 	  } else {
-		  alert("Archimedean solid A" + id + " is not yet available.\n\nPlease help us collect the full set.");
+		  alert("Archimedean or Catalan solid " + getPrefix(asolid.type) + id + " is not yet available.\n\nPlease help us collect the full set.");
 	  }
 	}
 }
 
+function getPrefix(type) {
+  return (type == "catalan") ? "C" 
+       : (type == "duals") ? "D" : "A";
+}
+
 function fillRow(tr, asolid) {
-  const { id, title, field, url, edgescene, facescene, zometool } = asolid;
+  const { id, title, field, url, edgescene, facescene, zometool, type } = asolid;
   // Data attribute names must be prefixed with 'data-' and should not contain any uppercase letters,
   tr.setAttribute("data-field", field);
   tr.setAttribute("data-edgescene", edgescene);
   tr.setAttribute("data-facescene", facescene);
   tr.setAttribute("data-zometool", !!zometool);
-  if(!tr.id) {
+  tr.setAttribute("data-type", type);
+    if(!tr.id) {
     tr.id = "asolid-" + id;
   }
   // Id column
   let td = tr.insertCell();
   td.className = url ? "ident done" : "ident todo";
-  td.innerHTML = "A" + id;
+  td.innerHTML = getPrefix(type) + id;
   // title column
   td = tr.insertCell();
   td.className = "title";

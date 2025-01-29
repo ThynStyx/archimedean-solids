@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="83" field="golden" version="7.1">
-  <EditHistory editNumber="55" lastStickyEdit="53">
+<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="93" field="golden" version="7.1">
+  <EditHistory editNumber="140" lastStickyEdit="140">
     <StrutCreation anchor="0 0 0 0 0 0" dir="green" index="8" len="2 2"/>
     <StrutCreation anchor="2 2 0 0 2 2" dir="green" index="12" len="2 2" symm="octahedral"/>
     <StrutCreation anchor="0 0 0 0 4 4" dir="green" index="14" len="2 2" symm="octahedral"/>
@@ -48,14 +48,127 @@
     <BookmarkTool name="tool-1"/>
     <InvertSelection/>
     <BookmarkTool name="tool-2"/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <Snapshot id="0"/>
     <ShowHidden/>
     <InvertSelection/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <Snapshot id="1"/>
     <ShowHidden/>
+    <BeginBlock/>
     <DeselectAll/>
+    <SelectManifestation>
+      <polygonVertex at="0 0 -2 -2 4 4"/>
+      <polygonVertex at="2 2 0 0 4 4"/>
+      <polygonVertex at="0 0 2 2 4 4"/>
+      <polygonVertex at="-2 -2 0 0 4 4"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="2 2 4 4 0 0"/>
+      <polygonVertex at="0 0 4 4 2 2"/>
+      <polygonVertex at="0 0 2 2 4 4"/>
+      <polygonVertex at="2 2 0 0 4 4"/>
+      <polygonVertex at="4 4 0 0 2 2"/>
+      <polygonVertex at="4 4 2 2 0 0"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
+    <BeginBlock/>
+    <SelectManifestation point="0 0 -2 -2 4 4"/>
+    <SelectManifestation point="0 0 2 2 4 4"/>
+    <EndBlock/>
+    <NewCentroid/>
+    <BeginBlock/>
+    <SelectManifestation point="4 4 2 2 0 0"/>
+    <SelectManifestation point="0 0 2 2 4 4"/>
+    <EndBlock/>
+    <NewCentroid/>
+    <ApplyTool copyColors="true" name="bookmark.builtin/ball at origin" selectInputs="true"/>
+    <SelectManifestation endSegment="0 0 2 2 4 4" startSegment="2 2 0 0 4 4"/>
+    <Midpoint>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Midpoint>
+    <SelectManifestation point="0 0 2 2 4 4"/>
+    <CrossProduct/>
+    <BeginBlock/>
+    <SelectManifestation point="0 0 0 0 4 4"/>
+    <SelectManifestation point="2 2 2 2 2 2"/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <EndBlock/>
+    <JoinPoints closedLoop="false" joinMode="ALL_TO_LAST"/>
+    <BeginBlock/>
+    <SelectManifestation endSegment="0 0 0 0 0 0" startSegment="2 2 2 2 2 2"/>
+    <SelectManifestation endSegment="-1 1 -1 1 5 4" startSegment="1 1 1 1 4 4"/>
+    <EndBlock/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <SelectManifestation endSegment="-1 1 -1 1 5 4" startSegment="1 1 1 1 4 4"/>
+    <SelectManifestation endSegment="0 0 0 0 0 0" startSegment="2 2 2 2 2 2"/>
+    <EndBlock/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <SelectManifestation point="-1 1 -1 1 5 4"/>
+    <SelectManifestation endSegment="-1 1 -1 1 5 4" startSegment="1 1 1 1 4 4"/>
+    <SelectManifestation point="1 1 1 1 4 4"/>
+    <SelectManifestation point="0 0 0 0 4 4"/>
+    <SelectManifestation endSegment="0 0 0 0 0 0" startSegment="0 0 0 0 4 4"/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation endSegment="0 0 0 0 0 0" startSegment="2 2 2 2 2 2"/>
+    <SelectManifestation point="2 2 2 2 2 2"/>
+    <SelectManifestation point="3 3 3 3 3 3"/>
+    <EndBlock/>
+    <Delete/>
+    <ShowHidden/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <SelectManifestation point="3 3 3 3 3 3"/>
+    <SelectManifestation point="0 0 0 0 9/2 9/2"/>
+    <EndBlock/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
+    <SelectAll originLast="true"/>
+    <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
+    <ConvexHull3d mode=""/>
+    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="DESELECT" struts="IGNORE"/>
+    <BookmarkTool name="tool-3"/>
+    <InvertSelection/>
+    <BookmarkTool name="tool-4"/>
+    <Delete/>
+    <Snapshot id="2"/>
+    <SelectAll originLast="true"/>
+    <Delete/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <DeselectAll/>
+    <Snapshot id="3"/>
+    <ShowHidden/>
+    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="DESELECT" struts="IGNORE"/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
+    <ShowHidden/>
+    <ApplyTool copyColors="true" name="tool-3" selectInputs="true"/>
+    <InvertSelection/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
+    <Snapshot id="4"/>
+    <ShowHidden/>
+    <InvertSelection/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
+    <Snapshot id="5"/>
+    <ShowHidden/>
+    <DeselectAll/>
+    <Snapshot id="6"/>
   </EditHistory>
   <notes>
     <page snapshot="0" title="Edges">
@@ -67,6 +180,46 @@
       <content xml:space="preserve"/>
     </page>
     <page snapshot="1" title="Faces">
+      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="2" title="Dual Edges">
+      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="3" title="Dual Faces">
+      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="4" title="Combined Edges">
+      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="5" title="Combined Faces">
+      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="6" title="Complete">
       <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
@@ -91,7 +244,10 @@
     <Direction color="0,142,194" name="blue" orbit="[[0,0,1],[0,0,1]]"/>
     <Direction color="0,153,63" name="green" orbit="[[2,-1,1],[5,-3,1]]"/>
     <Direction color="154,117,74" name="sand" orbit="[[-8,5,1],[5,-3,1]]"/>
+    <Direction color="255,255,255" name="1" orbit="[[-4,3,5],[5,-3,1]]" prototype="6 -3 6 -3 -3 3/2"/>
     <Direction color="18,73,48" name="spruce" orbit="[[-5,4,11],[-5,4,11]]"/>
+    <Direction color="184,134,11" name="2" orbit="[[1,0,2],[0,0,1]]" prototype="0 0 -144 90 72 -45"/>
+    <Direction color="176,224,230" name="0" orbit="[[-8,5,1],[-11,7,1]]" prototype="144 -90 0 0 72 -45"/>
     <Direction color="217,18,24" name="red" orbit="[[-1,1,1],[0,0,1]]"/>
     <Direction color="255,126,106" name="coral" orbit="[[-3,2,2],[-1,1,2]]"/>
     <Direction color="50,50,50" name="black" orbit="[[-2,3,11],[-7,5,11]]"/>
@@ -111,15 +267,18 @@
   </SymmetrySystem>
   <OtherSymmetries>
     <SymmetrySystem name="octahedral" renderingStyle="trapezoids">
-      <Direction color="0,142,194" name="blue" orbit="[[0,0,1],[0,0,1]]"/>
-      <Direction color="175,135,255" name="lavender" orbit="[[1,2,1],[-1,0,1]]"/>
       <Direction color="0,179,161" name="turquoise" orbit="[[-1,2,1],[1,-2,1]]"/>
       <Direction color="50,50,50" name="black" orbit="[[0,1,1],[1,-1,1]]"/>
       <Direction color="0,153,63" name="green" orbit="[[0,0,1],[-1,0,1]]"/>
+      <Direction color="255,179,26" name="yellow" orbit="[[1,0,1],[-1,0,1]]"/>
+      <Direction color="0,142,194" name="blue" orbit="[[0,0,1],[0,0,1]]"/>
+      <Direction color="175,135,255" name="lavender" orbit="[[1,2,1],[-1,0,1]]"/>
+      <Direction color="255,255,255" name="0" orbit="[[1,0,4],[1,0,4]]" prototype="2 -1 2 -1 8 -4"/>
       <Direction color="100,113,0" name="olive" orbit="[[1,0,1],[3,-2,1]]"/>
       <Direction color="117,0,50" name="maroon" orbit="[[-1,2,1],[1,0,1]]"/>
       <Direction color="107,53,26" name="brown" orbit="[[1,0,1],[-2,0,1]]"/>
-      <Direction color="255,179,26" name="yellow" orbit="[[1,0,1],[-1,0,1]]"/>
+      <Direction color="255,255,255" name="2" orbit="[[0,0,1],[1,0,2]]" prototype="0 0 72 -45 144 -90"/>
+      <Direction color="255,255,255" name="1" orbit="[[1,0,2],[1,0,1]]" prototype="2 -2 2 -2 -1 1"/>
       <Direction color="217,18,24" name="red" orbit="[[-1,1,1],[0,0,1]]"/>
       <Direction color="125,54,211" name="purple" orbit="[[0,0,1],[2,-1,1]]"/>
     </SymmetrySystem>
@@ -128,5 +287,7 @@
     <Tool copyColors="true" deleteInputs="true" id="tool-0" label="translation 0" selectInputs="false"/>
     <Tool copyColors="true" deleteInputs="false" id="tool-1" label="Edges" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" id="tool-2" label="Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-3" label="Dual Edges" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-4" label="Dual Faces" selectInputs="true"/>
   </Tools>
 </vzome:vZome>
