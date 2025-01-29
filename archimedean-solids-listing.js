@@ -427,15 +427,31 @@ snubSwitch.addEventListener("click", // use "click" rather than "change" for a b
 document.getElementsByName("solid-type").forEach(rb => rb.addEventListener("click", 
   e => {
 	if(selectedType != e.target.value) {
-	  console.log("selectedType changed from " + selectedType + " to " + e.target.value);
 	  selectedType = e.target.value;
+	  const tds = document.querySelectorAll("td.title");
+	  for(const td of tds) { 
+		const tr = td.closest("tr");
+		const { id, title, catalan, zometool, zomedual } = tr.dataset;
+		const text = selectedType == "C" ? catalan 
+				   : selectedType == "B" ? title + " + dual"
+				   						 : title;
+		const zome = selectedType == "C" ? zomedual == "true"
+				   : selectedType == "B" ? zomedual == "true" && zometool == "true" 
+				   						 : zometool == "true";
+		td.textContent = text;
+		if(zome) {
+			td.classList.add("zometool");
+		} else {
+			td.classList.remove("zometool"); 
+		}
+	  }
       setScene(selectedRow.dataset);
 	}
   }
 ) );
 
 function selectArchimedeanSolid( asolid, tr ) {
-	if(tr != selectedRow) {
+	if(tr != selectedRow) { 
 	  const { url, id } = asolid;
 		if(url) {
 		  if ( selectedRow ) {
@@ -443,34 +459,33 @@ function selectArchimedeanSolid( asolid, tr ) {
 		  }
 		  selectedRow = tr;
 		  selectedRow.className = "selected";
-		  document.getElementById( "index" ).textContent = getPrefix(asolid.type) +id;
+		  document.getElementById( "index" ).textContent = selectedType + id;
 		  switchModel(asolid);
 	  } else {
-		  alert("Archimedean or Catalan solid " + getPrefix(asolid.type) + id + " is not yet available.\n\nPlease help us collect the full set.");
+		  alert("Archimedean or Catalan solid " + selectedType + id + " is not yet available.\n\nPlease help us collect the full set.");
 	  }
 	}
 }
 
-function getPrefix(type) {
-  return (type == "catalan") ? "C" 
-       : (type == "duals") ? "D" : "A";
-}
-
 function fillRow(tr, asolid) {
-  const { id, title, field, url, edgescene, facescene, zometool, type } = asolid;
+  const { id, title, field, url, edgescene, facescene, zometool, catalan, zomedual, skip } = asolid;
   // Data attribute names must be prefixed with 'data-' and should not contain any uppercase letters,
+  tr.setAttribute("data-id", id);
   tr.setAttribute("data-field", field);
   tr.setAttribute("data-edgescene", edgescene);
   tr.setAttribute("data-facescene", facescene);
-  tr.setAttribute("data-zometool", !!zometool);
-  tr.setAttribute("data-type", type);
-    if(!tr.id) {
+  tr.setAttribute("data-title", title);
+  tr.setAttribute("data-catalan", catalan);
+  tr.setAttribute("data-zometool", zometool);
+  tr.setAttribute("data-zomedual", zomedual);
+  tr.setAttribute("data-skip", skip);
+  if(!tr.id) {
     tr.id = "asolid-" + id;
   }
   // Id column
   let td = tr.insertCell();
   td.className = url ? "ident done" : "ident todo";
-  td.innerHTML = getPrefix(type) + id;
+  td.innerHTML = id;
   // title column
   td = tr.insertCell();
   td.className = "title";
@@ -498,15 +513,37 @@ function setScene( asolidSceneData ) {
   // asolidSceneData may be a asolid object from the JSON
   /// or it may be selectedRow.dataset.
   // Either one should have these properties, all in lower case
-  const { field, edgescene, facescene, zometool } = asolidSceneData;
+  const { id, field, edgescene, facescene, catalan, zomedual, skip } = asolidSceneData;
   const isSnub = field.toLowerCase().startsWith("snub");
+  let zometool = asolidSceneData.zometool
+  if(skip != "true") { // may be undefined
+	switch(selectedType) {
+		case "B": // Both
+			zometool = zometool && zomedual;
+			break;
+		case "C": // Catalan
+			zometool = zomedual;
+			break;
+	}
+  }
+  // adjust the scene for golden, snub or neither
+  let scene = isSnub 
+  		? (whichChiralTwin ? edgescene : facescene)
+		: ((field == "Golden" && zometool == "true") || showAnyEdges) && showEdges.checked ? edgescene : facescene;
+  if(skip != "true") { // may be undefined
+	switch(selectedType) {
+		case "B": // Both
+			scene = "Combined " + scene;
+			break;
+		case "C": // Catalan
+			scene = "Dual " + scene;
+			break;
+	}
+  }
+  document.getElementById( "index" ).textContent = selectedType + id;
   // adjust visibility of the checkbox and button 
   zomeSwitch.className = !isSnub && (showAnyEdges || (zometool == "true")) ? 'zome' : 'no-zome';
   snubSwitch.className = isSnub ? 'snub' : 'no-snub';
-	// adjust the scene for golden, snub or neither
-  const scene = isSnub 
-  		? (whichChiralTwin ? edgescene : facescene)
-		: ((field == "Golden" && zometool == "true") || showAnyEdges) && showEdges.checked ? edgescene : facescene;
   viewer.scene = scene;
   viewer.update({ camera });
 }
