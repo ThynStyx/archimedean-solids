@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="83" field="snubDodec" version="7.1">
-  <EditHistory editNumber="19" lastStickyEdit="19">
+<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="93" field="snubDodec" version="7.1">
+  <EditHistory editNumber="133" lastStickyEdit="132">
     <Branch>
       <StrutCreation anchor="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" index="0" len="2 4 0 0 0 0"/>
       <StrutCreation anchor="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" index="1" len="2 4 0 0 0 0"/>
       <SelectAll originLast="true"/>
-      <Polygon/>
+      <Polygon>
+        <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+      </Polygon>
       <MirrorTool name="tool-0"/>
     </Branch>
     <StrutCreation anchor="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" dir="snubVertex" index="40" len="9 21 12 18 -9 -18"/>
@@ -22,13 +24,155 @@
     <Snapshot id="0"/>
     <SelectAll originLast="true"/>
     <BookmarkTool name="tool-1"/>
-    <ApplyTool copyColors="false" deleteInputs="true" name="tool-0"/>
-    <BookmarkTool name="tool-2"/>
+    <Branch>
+      <ApplyTool copyColors="false" deleteInputs="true" name="tool-0"/>
+      <BookmarkTool name="tool-2"/>
+      <DeselectAll/>
+      <Snapshot id="1"/>
+    </Branch>
+    <BeginBlock/>
     <DeselectAll/>
-    <Snapshot id="1"/>
+    <SelectAll originLast="true"/>
+    <EndBlock/>
+    <ConvexHull3d mode="noPanels"/>
+    <BookmarkTool name="tool-3"/>
+    <Branch>
+      <ApplyTool copyColors="false" deleteInputs="true" name="tool-0"/>
+      <BookmarkTool name="tool-4"/>
+    </Branch>
+    <InvertSelection/>
+    <Hide/>
+    <BeginBlock/>
+    <SelectManifestation point="18 30 6 9 -9 -15 9 9 9 15 -9 -12 -6 -15 3 6 0 3"/>
+    <SelectManifestation point="0 3 -3 -6 3 3 18 36 6 9 -9 -18 3 3 9 15 -6 -9"/>
+    <SelectManifestation point="-18 -24 -3 -6 9 12 9 9 -6 -9 0 3 12 21 9 15 -9 -15"/>
+    <SelectManifestation point="-9 -15 6 9 0 0 -18 -27 -9 -15 12 18 12 12 3 6 -6 -6"/>
+    <SelectManifestation point="9 21 12 18 -9 -18 -18 -27 0 0 6 9 -6 -6 0 0 3 3"/>
+    <EndBlock/>
+    <NewCentroid/>
+    <BeginBlock/>
+    <SelectManifestation point="9 21 12 18 -9 -18 -18 -27 0 0 6 9 -6 -6 0 0 3 3"/>
+    <SelectManifestation point="-9 -15 6 9 0 0 -18 -27 -9 -15 12 18 12 12 3 6 -6 -6"/>
+    <SelectManifestation point="-9 -21 -12 -18 9 18 18 27 0 0 -6 -9 -6 -6 0 0 3 3"/>
+    <EndBlock/>
+    <NewCentroid/>
+    <BeginBlock/>
+    <SelectManifestation point="-9 -21 -12 -18 9 18 18 27 0 0 -6 -9 -6 -6 0 0 3 3"/>
+    <SelectManifestation point="-9 -15 6 9 0 0 -18 -27 -9 -15 12 18 12 12 3 6 -6 -6"/>
+    <SelectManifestation point="18 36 6 9 -9 -18 3 3 9 15 -6 -9 0 3 -3 -6 3 3"/>
+    <EndBlock/>
+    <NewCentroid/>
+    <BeginBlock/>
+    <SelectManifestation point="-3 -5 2 3 0 0 -6 -9 -3 -5 4 6 0 0 1 2 0 0"/>
+    <SelectManifestation point="0 0 0 0 0 0 1 1 0 0 0 0 2 3 0 0 0 0"/>
+    <EndBlock/>
+    <ApplyTool copyColors="true" name="bookmark.builtin/ball at origin" selectInputs="true"/>
+    <JoinPoints closedLoop="false" joinMode="ALL_TO_LAST"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="-9 -21 -12 -18 9 18 18 27 0 0 -6 -9 -6 -6 0 0 3 3" startSegment="-9 -15 6 9 0 0 -18 -27 -9 -15 12 18 12 12 3 6 -6 -6"/>
+    <EndBlock/>
+    <Midpoint/>
+    <BeginBlock/>
+    <SelectManifestation point="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+    <SelectManifestation point="-9 -18 -3 -9/2 9/2 9 0 0 -9/2 -15/2 3 9/2 3 3 3/2 3 -3/2 -3/2"/>
+    <SelectManifestation point="-9 -21 -12 -18 9 18 18 27 0 0 -6 -9 -6 -6 0 0 3 3"/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+    <SelectManifestation point="-9 -18 -3 -9/2 9/2 9 0 0 -9/2 -15/2 3 9/2 3 3 3/2 3 -3/2 -3/2"/>
+    <SelectManifestation point="-9 -21 -12 -18 9 18 18 27 0 0 -6 -9 -6 -6 0 0 3 3"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <BookmarkTool name="tool-5"/>
+    <SelectManifestation endSegment="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" startSegment="0 0 0 0 0 0 1 1 0 0 0 0 2 3 0 0 0 0"/>
+    <StrutIntersection/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <SelectManifestation endSegment="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" startSegment="-3 -5 2 3 0 0 -6 -9 -3 -5 4 6 0 0 1 2 0 0"/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="-9 -18 -3 -9/2 9/2 9 0 0 -9/2 -15/2 3 9/2 3 3 3/2 3 -3/2 -3/2"/>
+    <SelectManifestation point="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+    <SelectNeighbors/>
+    <SelectNeighbors/>
+    <EndBlock/>
+    <Delete/>
+    <SelectManifestation point="0 3 18/5 24/5 -6/5 -18/5 0 0 0 0 0 0 3 3 24/5 42/5 -18/5 -24/5"/>
+    <ApplyTool copyColors="true" name="bookmark.builtin/ball at origin" selectInputs="true"/>
+    <JoinPoints closedLoop="false"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="-9 -15 6 9 0 0 -18 -27 -9 -15 12 18 12 12 3 6 -6 -6" startSegment="9 21 12 18 -9 -18 -18 -27 0 0 6 9 -6 -6 0 0 3 3"/>
+    <EndBlock/>
+    <Midpoint/>
+    <SelectManifestation point="-18 -36 -6 -9 9 18 -12 0 -9 -18 12 9 -6 -6 0 0 3 3"/>
+    <JoinPoints closedLoop="false"/>
+    <SelectManifestation endSegment="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" startSegment="0 3 18/5 24/5 -6/5 -18/5 0 0 0 0 0 0 3 3 24/5 42/5 -18/5 -24/5"/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" startSegment="0 3 18/5 24/5 -6/5 -18/5 0 0 0 0 0 0 3 3 24/5 42/5 -18/5 -24/5"/>
+    <SelectManifestation point="-18 -36 -6 -9 9 18 -12 0 -9 -18 12 9 -6 -6 0 0 3 3"/>
+    <SelectManifestation point="0 3 9 27/2 -9/2 -9 -18 -27 -9/2 -15/2 9 27/2 3 3 3/2 3 -3/2 -3/2"/>
+    <SelectManifestation point="-18 -36 -6 -9 9 18 -12 0 -9 -18 12 9 -6 -6 0 0 3 3"/>
+    <SelectNeighbors/>
+    <EndBlock/>
+    <Delete/>
+    <BeginBlock/>
+    <SelectManifestation point="-78/31 6/31 3/31 -36/31 60/31 24/31 0 0 0 0 0 0 6/31 -72/31 -36/31 -33/31 24/31 84/31"/>
+    <SelectManifestation point="-18 -36 -6 -9 9 18 -12 0 -9 -18 12 9 -6 -6 0 0 3 3"/>
+    <SelectManifestation point="0 0 0 0 0 0 12 0 0 3 -6 0 12 12 3 6 -6 -6"/>
+    <InvertSelection/>
+    <EndBlock/>
+    <Hide/>
+    <SelectAll originLast="true"/>
+    <ApplyTool copyColors="true" name="icosahedral.builtin/icosahedral around origin" selectInputs="true"/>
+    <ConvexHull3d mode=""/>
+    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="DESELECT" struts="IGNORE"/>
+    <BookmarkTool name="tool-6"/>
+    <Branch>
+      <ApplyTool copyColors="false" deleteInputs="true" name="tool-0"/>
+      <BookmarkTool name="tool-7"/>
+    </Branch>
+    <Branch>
+      <InvertSelection/>
+      <BookmarkTool name="tool-8"/>
+      <ApplyTool copyColors="false" deleteInputs="true" name="tool-0"/>
+      <BookmarkTool name="tool-9"/>
+    </Branch>
+    <Hide/>
+    <Snapshot id="2"/>
+    <SelectAll originLast="true"/>
+    <Branch>
+      <ApplyTool copyColors="false" deleteInputs="true" name="tool-0"/>
+      <DeselectAll/>
+      <Snapshot id="3"/>
+    </Branch>
+    <ApplyTool copyColors="true" name="tool-1" selectInputs="true"/>
+    <DeselectAll/>
+    <Snapshot id="4"/>
+    <SelectAll originLast="true"/>
+    <Branch>
+      <ApplyTool copyColors="false" deleteInputs="true" name="tool-0"/>
+      <DeselectAll/>
+      <Snapshot id="5"/>
+    </Branch>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-3" selectInputs="true"/>
+    <ApplyTool copyColors="true" name="tool-6" selectInputs="true"/>
+    <DeselectAll/>
+    <Snapshot id="6"/>
+    <SelectAll originLast="true"/>
+    <Branch>
+      <ApplyTool copyColors="false" deleteInputs="true" name="tool-0"/>
+      <DeselectAll/>
+      <Snapshot id="7"/>
+    </Branch>
+    <DeselectAll/>
   </EditHistory>
   <notes>
-    <page snapshot="0" title="Dextro Faces">
+    <page snapshot="0" title="Dextro">
       <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
@@ -36,7 +180,55 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="1" title="Laevo Faces">
+    <page snapshot="1" title="Laevo">
+      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="2" title="Dual Dextro">
+      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="3" title="Dual Laevo">
+      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="4" title="Combined Dextro">
+      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="5" title="Combined Laevo">
+      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="6" title="Complete Dextro">
+      <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="7" title="Complete Laevo">
       <ViewModel distance="108.73126983642578" far="217.46253967285156" near="0.27182817459106445" parallel="false" stereoAngle="0.0" width="48.92906951904297">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
@@ -57,10 +249,12 @@
       <LookDirection x="0.06774808466434479" y="-0.15497328341007233" z="-0.9855926632881165"/>
     </ViewModel>
   </Viewing>
-  <SymmetrySystem name="icosahedral" renderingStyle="printable">
+  <SymmetrySystem name="icosahedral" renderingStyle="small dodecahedra">
     <Direction color="0,153,63" name="green" orbit="[[2,-1,0,0,0,0,1],[5,-3,0,0,0,0,1]]"/>
     <Direction color="87,188,48" name="snubTriangle" orbit="[[72,9,4,36,-48,-6,71],[135,-63,-28,32,-90,42,71]]"/>
     <Direction color="154,117,74" name="sand" orbit="[[-8,5,0,0,0,0,1],[5,-3,0,0,0,0,1]]"/>
+    <Direction color="255,255,255" name="1" orbit="[[-56,21,12,-20,26,-2,31],[-15,25,32,-12,28,-26,31]]" prototype="6 18 -6 -12 3 0 42 24 6 18 -24 -15 -12 30 12 12 3 -21"/>
+    <Direction color="255,255,255" name="0" orbit="[[20,-13,-46,28,-38,24,1],[-21,13,52,-32,42,-26,1]]" prototype="-39 -57 -45/2 -75/2 27 81/2 27 33 -21/2 -15 -9/2 -3/2 -9 -18 -3 -9/2 9/2 9"/>
     <Direction color="50,50,50" name="black" orbit="[[-2,3,0,0,0,0,11],[-7,5,0,0,0,0,11]]"/>
     <Direction color="255,51,143" name="rose" orbit="[[0,0,0,0,0,0,1],[-4,3,0,0,0,0,5]]"/>
     <Direction color="0,179,161" name="turquoise" orbit="[[2,-1,0,0,0,0,2],[-3,2,0,0,0,0,2]]"/>
@@ -93,7 +287,14 @@
   </OtherSymmetries>
   <Tools>
     <Tool copyColors="false" deleteInputs="true" id="tool-0" label="mirror 0" selectInputs="false"/>
-    <Tool copyColors="true" deleteInputs="false" id="tool-1" label="bookmark 1" selectInputs="true"/>
-    <Tool copyColors="true" deleteInputs="false" id="tool-2" label="bookmark 2" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-1" label="Dextro Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-2" label="Laevo Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-3" label="Dextro Edges" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-4" label="Laevo Edges" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-5" label="3 to 3 x product" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-6" label="Dual Dextro Edges" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-7" label="Dual Laevo Edges" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-8" label="Dual Dextro Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-9" label="Dual Laevo Faces" selectInputs="true"/>
   </Tools>
 </vzome:vZome>

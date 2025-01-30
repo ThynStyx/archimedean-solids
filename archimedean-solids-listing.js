@@ -3,12 +3,13 @@ import { models } from './archimedean-solids-models.js';
 let camera = true;
 let whichChiralTwin = false;
 let selectedRow;
+let selectedType = "A";
 const searchParams = new URL(document.location).searchParams;
 const table = document.getElementById( "partsTable" );
 const tbody = table.createTBody();
 const viewer = document.getElementById( "viewer" );
 const showEdges = document.getElementById( "showEdges" );
-const showChiralTwin = document.getElementById( "showChiralTwin" );
+const typeId = document.getElementById( "typeId" );
 const zomeSwitch = document.getElementById( "zome-switch" );
 const snubSwitch = document.getElementById( "snub-switch" );
 const downloadLink = document.getElementById( "download" );
@@ -198,8 +199,6 @@ function rescale(modelData) {
 		}
 	}
 
-	var nTriangleEdges = 0;
-	var sumOfLengths = 0;
 	var minLength = Number.MAX_VALUE;
 	// TODO: deal with the fact that snapshots may be a JavaScript object having keys and values, or it may be an array, depending on the json source
 	// Try using for ... in on both an object and an array
@@ -211,46 +210,15 @@ function rescale(modelData) {
 			const shape = shapeMap.get(shapeGuid);
 			if(isPanel(shape)) {
 				const vertices = shape.vertices;
-				//console.log("vertices.length = " + vertices.length);
 				minLength = Math.min(minLength, edgeLength(vertices[0], vertices[vertices.length-1]));
 				for(let v = 1; v < vertices.length; v++) {
 					minLength = Math.min( minLength, edgeLength(vertices[v-1], vertices[v]) );
-					//console.log("minLength = " + minLength);
 				}			
-				if(vertices.length == 3) {
-					// All Johnson solids have at least one equilateral triangle face.
-					// All other polygons are chopped into triangles that are not necessarily equilateral.
-
-					// TODO: THIS IS NOT TRUE FOR 4 OF THE ARCHIMEDIAN SOLIDS SO I NEED A NEW APPROACH!!!
-					
-					// I'll use the average length of all the edges of all the triangular faces
-					// to calculate the rescaling factor.
-					// Note that the edges will be counted twice when two triangles share an edge,
-					// and other triangle edges will only be counted once when a triangle shares
-					// an edge with a larger polygon such as a square.
-					// It's not worth the effort to distinguish the two cases for this application.
-					// In fact, it would work well enough by just using the first equilateral triangle 
-					// edge length that we encounter.
-					sumOfLengths += edgeLength(vertices[0], vertices[1]); nTriangleEdges++;
-					sumOfLengths += edgeLength(vertices[1], vertices[2]); nTriangleEdges++;
-					sumOfLengths += edgeLength(vertices[2], vertices[0]); nTriangleEdges++;
-				}
 			}
 		}
 	}
 
-	//console.log("minLength = " + minLength);
-
 	const averageLength = minLength;
-//	if(nTriangleEdges == 0) {
-//		console.log("sumOfLengths = " + sumOfLengths + "\tnTriangleEdges = " + nTriangleEdges);
-//		//alert("Can't rescale solids with no triangle faces.");
-//		// modelData; // unchanged
-//	} else {
-//		averageLength = sumOfLengths / nTriangleEdges;
-//		console.log("averageLength = " + averageLength + "  (Ideal length = 2.0.)");
-//	}
-	
 	// Many models have an averageLength of 8.472135952064994 = (2+4phi) corresponding to blue zometool lengths.
 	// The target edge length will be 2 because most of the coordinates on qfbox and wikipedia
 	// have edge length of 2, resulting in a half edge length of 1 on each side of the symmetry plane(s).
@@ -258,7 +226,6 @@ function rescale(modelData) {
 	
 	console.log("scaleFactor = " + scaleFactor);
 	if(!!modelData.scaleFactor) {
-		// TODO: Test this earlier and return earlier
 		console.log("Previously calculated scaleFactor of " + modelData.scaleFactor + " will not be modified.");
 	} else {
 		// persist scaleFactor in the json
@@ -272,14 +239,11 @@ function rescale(modelData) {
 			}
 		}
 		// scale all instances
-		//console.log(modelData.instances.length + " instances");
 		for(let i = 0; i < modelData.instances.length; i++) {
 			scaleVector(sigScaleFactor, modelData.instances[i].position);
 		}
 		// scale all snapshots
-		//console.log(modelData.snapshots.length + " snapshots");
 		for(let i = 0; i < modelData.snapshots.length; i++) {
-			//console.log(modelData.snapshots[i].length + " snapshot[" + i + "]");
 			for(let j = 0; j < modelData.snapshots[i].length; j++) {
 				scaleVector(sigScaleFactor, modelData.snapshots[i][j].position);
 			}
@@ -341,7 +305,11 @@ function recolor(modelData) {
 		}
 	}
 	for(const snapshot of snapshots) {
+		console.log("Preparing to to recolor faces of snapshots[ " + snapshot + " ]");
 		const ss = modelData.snapshots[snapshot];
+		if(!ss || ss.length == 0) {
+			console.log("Snapshot named " + snapshot + " was not found.");
+		}
 		for(let i = 0; i < ss.length; i++) {
 			const item = ss[i];
 			const shapeGuid = item.shape;
@@ -349,6 +317,8 @@ function recolor(modelData) {
 			const newColor = shapeColors.get(nVertices);
 			if(newColor) {
 				modelData.snapshots[snapshot][i].color = newColor;
+			} else {
+				console.log("\t\t" + shapeGuid + " skipped - no color found for " + nVertices + " vertices");
 			}
 		}
 	}
@@ -361,12 +331,27 @@ function getFaceSceneSnapshots(modelData) {
 	const url = viewer.src;
 	const facescenes = [];
 	for(const model of models) {
+		// Oncce all of the Archemedean solids have their Catalin duals working, I will remove this "skip" code 
+		const skip = model.skip == "true";
 		if(model.url == url) {
+			if(skip) {
+				console.log("Skipping 'Dual' and 'Combined' facescenes for " + model.title + ". (" + model.catalan + ")" );
+			}
 			facescenes.push(model.facescene);
+			if(!skip) {
+				// Include these two hard coded variants for the Catalans
+				facescenes.push("Dual " + model.facescene);
+				facescenes.push("Combined " + model.facescene);
+			}
 			if(model.field.toLowerCase().startsWith("snub")) {
 				// For Archimedean snub fields, 
-				// the edgescene are supposed to have the chiral twin of facescene instead of struts
+				// The edgescene is supposed to have the chiral twin of facescene instead of struts
 				facescenes.push(model.edgescene);
+				if(!skip) {
+					// Include these two hard coded variants for the Catalans
+					facescenes.push("Dual " + model.edgescene);
+					facescenes.push("Combined " + model.edgescene);
+				}
 			}
 		}
 	}
@@ -401,7 +386,7 @@ let aId = parseInt(searchParams.get("A")); // upper case
 if(Number.isNaN(aId)) {
 	aId = parseInt(searchParams.get("a")); // lower case
 }
-if(aId >= 1 && aId <= 15) {
+if(aId >= 1 && aId <= tbody.rows.length) {
 	initialId = aId;
 }
 const initialRow = tbody.rows[ initialId - 1 ];
@@ -413,17 +398,46 @@ showEdges.addEventListener("change", // use "change" rather than "click" for a c
     setScene(selectedRow.dataset);
   } );
 
-// Add the handler to snubSwitch (the parent div) rather than showChiralTwin (the button itself)
+// Add the handler to snubSwitch (the parent div) rather than the button itself
 // so that the user can click anywhere on the div when the background color changes, not just on the button.
 // This isn't necessary on the showEdges checkbox
-snubSwitch.addEventListener("click", // use "click" rather han "change" for a button or a div
+snubSwitch.addEventListener("click", // use "click" rather than "change" for a button or a div
   () => {
 	whichChiralTwin = !whichChiralTwin;
     setScene(selectedRow.dataset);
   } );
 
+// use "click" rather than "change" for each radio button
+document.getElementsByName("solid-type").forEach(rb => rb.addEventListener("click", 
+  e => {
+	if(selectedType != e.target.value) {
+	  selectedType = e.target.value;
+	  // update the top corner cell in the table header
+	  typeId.textContent = selectedType;
+	  const tds = document.querySelectorAll("td.title");
+	  for(const td of tds) { 
+		const tr = td.closest("tr");
+		const { id, title, catalan, zometool, zomedual } = tr.dataset;
+		const text = selectedType == "C" ? catalan 
+				   : selectedType == "B" ? title + " + dual"
+				   						 : title;
+		const zome = selectedType == "C" ? zomedual == "true"
+				   : selectedType == "B" ? zomedual == "true" && zometool == "true" 
+				   						 : zometool == "true";
+		td.textContent = text;
+		if(zome) {
+			td.classList.add("zometool");
+		} else {
+			td.classList.remove("zometool"); 
+		}
+	  }
+      setScene(selectedRow.dataset);
+	}
+  }
+) );
+
 function selectArchimedeanSolid( asolid, tr ) {
-	if(tr != selectedRow) {
+	if(tr != selectedRow) { 
 	  const { url, id } = asolid;
 		if(url) {
 		  if ( selectedRow ) {
@@ -431,28 +445,33 @@ function selectArchimedeanSolid( asolid, tr ) {
 		  }
 		  selectedRow = tr;
 		  selectedRow.className = "selected";
-		  document.getElementById( "index" ).textContent = "A" +id;
+		  document.getElementById( "index" ).textContent = selectedType + id;
 		  switchModel(asolid);
 	  } else {
-		  alert("Archimedean solid A" + id + " is not yet available.\n\nPlease help us collect the full set.");
+		  alert("Archimedean or Catalan solid " + selectedType + id + " is not yet available.\n\nPlease help us collect the full set.");
 	  }
 	}
 }
 
 function fillRow(tr, asolid) {
-  const { id, title, field, url, edgescene, facescene, zometool } = asolid;
+  const { id, title, field, url, edgescene, facescene, zometool, catalan, zomedual, skip } = asolid;
   // Data attribute names must be prefixed with 'data-' and should not contain any uppercase letters,
+  tr.setAttribute("data-id", id);
   tr.setAttribute("data-field", field);
   tr.setAttribute("data-edgescene", edgescene);
   tr.setAttribute("data-facescene", facescene);
-  tr.setAttribute("data-zometool", !!zometool);
+  tr.setAttribute("data-title", title);
+  tr.setAttribute("data-catalan", catalan);
+  tr.setAttribute("data-zometool", zometool);
+  tr.setAttribute("data-zomedual", zomedual);
+  tr.setAttribute("data-skip", skip);
   if(!tr.id) {
     tr.id = "asolid-" + id;
   }
   // Id column
   let td = tr.insertCell();
   td.className = url ? "ident done" : "ident todo";
-  td.innerHTML = "A" + id;
+  td.innerHTML = id;
   // title column
   td = tr.insertCell();
   td.className = "title";
@@ -480,15 +499,37 @@ function setScene( asolidSceneData ) {
   // asolidSceneData may be a asolid object from the JSON
   /// or it may be selectedRow.dataset.
   // Either one should have these properties, all in lower case
-  const { field, edgescene, facescene, zometool } = asolidSceneData;
+  const { id, field, edgescene, facescene, catalan, zomedual, skip } = asolidSceneData;
   const isSnub = field.toLowerCase().startsWith("snub");
+  let zometool = asolidSceneData.zometool
+  if(skip != "true") { // may be undefined
+	switch(selectedType) {
+		case "B": // Both
+			zometool = zometool && zomedual;
+			break;
+		case "C": // Catalan
+			zometool = zomedual;
+			break;
+	}
+  }
+  // adjust the scene for golden, snub or neither
+  let scene = isSnub 
+  		? (whichChiralTwin ? edgescene : facescene)
+		: ((field == "Golden" && zometool == "true") || showAnyEdges) && showEdges.checked ? edgescene : facescene;
+  if(skip != "true") { // may be undefined
+	switch(selectedType) {
+		case "B": // Both
+			scene = "Combined " + scene;
+			break;
+		case "C": // Catalan
+			scene = "Dual " + scene;
+			break;
+	}
+  }
+  document.getElementById( "index" ).textContent = selectedType + id;
   // adjust visibility of the checkbox and button 
   zomeSwitch.className = !isSnub && (showAnyEdges || (zometool == "true")) ? 'zome' : 'no-zome';
   snubSwitch.className = isSnub ? 'snub' : 'no-snub';
-	// adjust the scene for golden, snub or neither
-  const scene = isSnub 
-  		? (whichChiralTwin ? edgescene : facescene)
-		: ((field == "Golden" && zometool == "true") || showAnyEdges) && showEdges.checked ? edgescene : facescene;
   viewer.scene = scene;
   viewer.update({ camera });
 }
