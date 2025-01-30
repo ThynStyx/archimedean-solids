@@ -11,5 +11,5 @@ export const models = [
   { id:10, field:"Root2",     edgescene:"Edges", facescene:"Faces", zometool:"false", title:"Truncated Cuboctahedron",      catalan:"Disdyakis Dodecahedron",      zomedual:"false", skip:"true", url:"uploads/ThynStyx/Root2-Truncated-Cuboctahedron-ONLINE.vZome"},
   { id:11, field:"Golden",    edgescene:"Edges", facescene:"Faces", zometool:"true",  title:"Truncated Icosidodecahedron",  catalan:"Disdyakis Triacontahedron",   zomedual:"false", skip:"true", url:"uploads/ThynStyx/Golden-Truncated-Icosidodecahedron-ONLINE.vZome"},
   { id:12, field:"SnubCube",  edgescene:"Dextro",facescene:"Laevo", zometool:"false", title:"Snub Cube",                    catalan:"Pentagonal Icositetrahedron", zomedual:"false",              url:"uploads/david-hall/SnubCubes.vZome"},
-  { id:13, field:"SnubDodec", edgescene:"Dextro Faces",facescene:"Laevo Faces", zometool:"false", title:"Snub Dodecahedron",            catalan:"Pentagonal Hexecontahedron",  zomedual:"false", skip:"true", url:"uploads/david-hall/SnubDodecs.vZome"},
+  { id:13, field:"SnubDodec", edgescene:"Dextro",facescene:"Laevo", zometool:"false", title:"Snub Dodecahedron",            catalan:"Pentagonal Hexecontahedron",  zomedual:"false",              url:"uploads/david-hall/SnubDodecs.vZome"},
   ]
