@@ -19,8 +19,8 @@
 
   <meta name="keywords" content="geometry,zome,vzome,Archimedean solids"/>
   
-  <meta property="og:image"  content="/archimedean-solids/card-image.png"/>
-  <meta name="twitter:image" content="/archimedean-solids/card-image.png"/>
+  <meta property="og:image"  content="/archimedean-solids/Card-image.png"/>
+  <meta name="twitter:image" content="/archimedean-solids/Card-image.png"/>
   <meta property="og:url" content="https://ThynStyx.github.io/archimedean-solids/"/>
   <link rel="canonical"      href="https://ThynStyx.github.io/archimedean-solids/">
   <link rel="shortcut icon" type="image/x-icon" href="/archimedean-solids/favicon.ico">
@@ -40,7 +40,7 @@
       </h1>
       <div class="intro-text">
         <p>
-          Select a row in the table to view that Archimedean solid.<br> 
+          Select a row in the table to view that Archimedean solid or its dual Catalan solid.<br> 
           For <a href="https://www.zometool.com" target="_blank" rel="noopener">Zometool</a>-constructible solids highlighted in blue,
           check the box in the viewer to show struts and balls.
         </p>
@@ -54,7 +54,7 @@
       <table id="partsTable">
         <thead>
           <tr>
-            <th class="ident">Id</th>
+            <th class="ident" id="typeId">A</th>
             <th class="title">
                 <div class="radio">
                     <div class="radio">
@@ -62,14 +62,14 @@
                         <label for="rbArch">Archimedean</label>
                     </div>
                     <div class="radio">
-                        <input  id="rbBoth" type="radio" name="solid-type" value="B" />
-                        <label for="rbBoth">Duals</label>
-                    </div>
-                    <div class="radio">
                         <input  id="rbCat" type="radio" name="solid-type" value="C" />
                         <label for="rbCat">Catalan</label>
                     </div>
-                </div>
+                    <div class="radio">
+                      <input  id="rbBoth" type="radio" name="solid-type" value="B" />
+                      <label for="rbBoth">Both</label>
+                  </div>
+              </div>
             </th>
           </tr>
         </thead>

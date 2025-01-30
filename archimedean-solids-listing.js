@@ -9,7 +9,7 @@ const table = document.getElementById( "partsTable" );
 const tbody = table.createTBody();
 const viewer = document.getElementById( "viewer" );
 const showEdges = document.getElementById( "showEdges" );
-const showChiralTwin = document.getElementById( "showChiralTwin" );
+const typeId = document.getElementById( "typeId" );
 const zomeSwitch = document.getElementById( "zome-switch" );
 const snubSwitch = document.getElementById( "snub-switch" );
 const downloadLink = document.getElementById( "download" );
@@ -199,8 +199,6 @@ function rescale(modelData) {
 		}
 	}
 
-	var nTriangleEdges = 0;
-	var sumOfLengths = 0;
 	var minLength = Number.MAX_VALUE;
 	// TODO: deal with the fact that snapshots may be a JavaScript object having keys and values, or it may be an array, depending on the json source
 	// Try using for ... in on both an object and an array
@@ -212,46 +210,15 @@ function rescale(modelData) {
 			const shape = shapeMap.get(shapeGuid);
 			if(isPanel(shape)) {
 				const vertices = shape.vertices;
-				//console.log("vertices.length = " + vertices.length);
 				minLength = Math.min(minLength, edgeLength(vertices[0], vertices[vertices.length-1]));
 				for(let v = 1; v < vertices.length; v++) {
 					minLength = Math.min( minLength, edgeLength(vertices[v-1], vertices[v]) );
-					//console.log("minLength = " + minLength);
 				}			
-				if(vertices.length == 3) {
-					// All Johnson solids have at least one equilateral triangle face.
-					// All other polygons are chopped into triangles that are not necessarily equilateral.
-
-					// TODO: THIS IS NOT TRUE FOR 4 OF THE ARCHIMEDIAN SOLIDS SO I NEED A NEW APPROACH!!!
-					
-					// I'll use the average length of all the edges of all the triangular faces
-					// to calculate the rescaling factor.
-					// Note that the edges will be counted twice when two triangles share an edge,
-					// and other triangle edges will only be counted once when a triangle shares
-					// an edge with a larger polygon such as a square.
-					// It's not worth the effort to distinguish the two cases for this application.
-					// In fact, it would work well enough by just using the first equilateral triangle 
-					// edge length that we encounter.
-					sumOfLengths += edgeLength(vertices[0], vertices[1]); nTriangleEdges++;
-					sumOfLengths += edgeLength(vertices[1], vertices[2]); nTriangleEdges++;
-					sumOfLengths += edgeLength(vertices[2], vertices[0]); nTriangleEdges++;
-				}
 			}
 		}
 	}
 
-	//console.log("minLength = " + minLength);
-
 	const averageLength = minLength;
-//	if(nTriangleEdges == 0) {
-//		console.log("sumOfLengths = " + sumOfLengths + "\tnTriangleEdges = " + nTriangleEdges);
-//		//alert("Can't rescale solids with no triangle faces.");
-//		// modelData; // unchanged
-//	} else {
-//		averageLength = sumOfLengths / nTriangleEdges;
-//		console.log("averageLength = " + averageLength + "  (Ideal length = 2.0.)");
-//	}
-	
 	// Many models have an averageLength of 8.472135952064994 = (2+4phi) corresponding to blue zometool lengths.
 	// The target edge length will be 2 because most of the coordinates on qfbox and wikipedia
 	// have edge length of 2, resulting in a half edge length of 1 on each side of the symmetry plane(s).
@@ -259,7 +226,6 @@ function rescale(modelData) {
 	
 	console.log("scaleFactor = " + scaleFactor);
 	if(!!modelData.scaleFactor) {
-		// TODO: Test this earlier and return earlier
 		console.log("Previously calculated scaleFactor of " + modelData.scaleFactor + " will not be modified.");
 	} else {
 		// persist scaleFactor in the json
@@ -273,14 +239,11 @@ function rescale(modelData) {
 			}
 		}
 		// scale all instances
-		//console.log(modelData.instances.length + " instances");
 		for(let i = 0; i < modelData.instances.length; i++) {
 			scaleVector(sigScaleFactor, modelData.instances[i].position);
 		}
 		// scale all snapshots
-		//console.log(modelData.snapshots.length + " snapshots");
 		for(let i = 0; i < modelData.snapshots.length; i++) {
-			//console.log(modelData.snapshots[i].length + " snapshot[" + i + "]");
 			for(let j = 0; j < modelData.snapshots[i].length; j++) {
 				scaleVector(sigScaleFactor, modelData.snapshots[i][j].position);
 			}
@@ -368,6 +331,7 @@ function getFaceSceneSnapshots(modelData) {
 	const url = viewer.src;
 	const facescenes = [];
 	for(const model of models) {
+		// Oncce all of the Archemedean solids have their Catalin duals working, I will remove this "skip" code 
 		const skip = model.skip == "true";
 		if(model.url == url) {
 			if(skip) {
@@ -434,7 +398,7 @@ showEdges.addEventListener("change", // use "change" rather than "click" for a c
     setScene(selectedRow.dataset);
   } );
 
-// Add the handler to snubSwitch (the parent div) rather than showChiralTwin (the button itself)
+// Add the handler to snubSwitch (the parent div) rather than the button itself
 // so that the user can click anywhere on the div when the background color changes, not just on the button.
 // This isn't necessary on the showEdges checkbox
 snubSwitch.addEventListener("click", // use "click" rather than "change" for a button or a div
@@ -448,6 +412,8 @@ document.getElementsByName("solid-type").forEach(rb => rb.addEventListener("clic
   e => {
 	if(selectedType != e.target.value) {
 	  selectedType = e.target.value;
+	  // update the top corner cell in the table header
+	  typeId.textContent = selectedType;
 	  const tds = document.querySelectorAll("td.title");
 	  for(const td of tds) { 
 		const tr = td.closest("tr");
