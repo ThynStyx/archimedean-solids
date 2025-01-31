@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="93" field="rootTwo" version="7.1">
-  <EditHistory editNumber="524" lastStickyEdit="524">
+  <EditHistory editNumber="701" lastStickyEdit="701">
     <BeginBlock/>
     <SelectManifestation point="0 0 0 0 0 0"/>
     <SelectManifestation point="0 0 0 0 0 0"/>
@@ -829,66 +829,385 @@
     <ApplyTool copyColors="true" name="tool-11" selectInputs="true"/>
     <DeselectAll/>
     <Snapshot id="11"/>
+    <SelectAll originLast="true"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <DeselectAll/>
+    <Snapshot id="12"/>
+    <ApplyTool copyColors="true" name="tool-11" selectInputs="true"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <BookmarkTool name="tool-12"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-12" selectInputs="true"/>
+    <Branch>
+      <Delete/>
+      <Snapshot id="13"/>
+    </Branch>
+    <Delete/>
+    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="SELECT" struts="IGNORE"/>
+    <Delete/>
+    <ApplyTool copyColors="true" name="tool-11" selectInputs="true"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <DeselectAll/>
+    <SelectAll originLast="true"/>
+    <EndBlock/>
+    <BookmarkTool name="tool-13"/>
+    <DeselectAll/>
+    <Snapshot id="14"/>
+    <ApplyTool copyColors="true" name="tool-13" selectInputs="true"/>
+    <Delete/>
+    <ApplyTool copyColors="true" name="tool-7" selectInputs="true"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <BookmarkTool name="tool-14"/>
+    <DeselectAll/>
+    <Snapshot id="15"/>
+    <ApplyTool copyColors="true" name="tool-0" selectInputs="true"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <BookmarkTool name="tool-15"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-14" selectInputs="true"/>
+    <Delete/>
+    <SelectAll originLast="true"/>
+    <setItemColor blue="0" green="160" red="240"/>
+    <Snapshot id="16"/>
+    <SelectAll originLast="true"/>
+    <Delete/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <DeselectAll/>
+    <Snapshot id="17"/>
+    <ApplyTool copyColors="true" name="tool-5" selectInputs="true"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <Branch>
+      <BookmarkTool name="tool-16"/>
+    </Branch>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-16" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-6" selectInputs="true"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <ApplyTool copyColors="true" deleteInputs="true" name="scaling.builtin/scale down"/>
+    <BookmarkTool name="tool-17"/>
+    <ApplyTool copyColors="true" name="tool-16" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-17" selectInputs="true"/>
+    <Delete/>
+    <AdjustSelectionByClass balls="SELECT" originLast="true" panels="IGNORE" struts="IGNORE"/>
+    <ApplyTool copyColors="true" name="tool-17" selectInputs="true"/>
+    <BookmarkTool name="tool-18"/>
+    <Delete/>
+    <ApplyTool copyColors="true" name="tool-16" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-16" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation>
+      <polygonVertex at="-2 0 4 0 4 0"/>
+      <polygonVertex at="-4 0 2 0 4 0"/>
+      <polygonVertex at="-4 0 -2 0 4 0"/>
+      <polygonVertex at="-2 0 -4 0 4 0"/>
+      <polygonVertex at="2 0 -4 0 4 0"/>
+      <polygonVertex at="4 0 -2 0 4 0"/>
+      <polygonVertex at="4 0 2 0 4 0"/>
+      <polygonVertex at="2 0 4 0 4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="4 0 4 0 -2 0"/>
+      <polygonVertex at="2 0 4 0 -4 0"/>
+      <polygonVertex at="-2 0 4 0 -4 0"/>
+      <polygonVertex at="-4 0 4 0 -2 0"/>
+      <polygonVertex at="-4 0 4 0 2 0"/>
+      <polygonVertex at="-2 0 4 0 4 0"/>
+      <polygonVertex at="2 0 4 0 4 0"/>
+      <polygonVertex at="4 0 4 0 2 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="4 0 4 0 -2 0"/>
+      <polygonVertex at="4 0 4 0 2 0"/>
+      <polygonVertex at="4 0 2 0 4 0"/>
+      <polygonVertex at="4 0 -2 0 4 0"/>
+      <polygonVertex at="4 0 -4 0 2 0"/>
+      <polygonVertex at="4 0 -4 0 -2 0"/>
+      <polygonVertex at="4 0 -2 0 -4 0"/>
+      <polygonVertex at="4 0 2 0 -4 0"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <ApplyTool copyColors="true" name="tool-18" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="-4 0 4 0 -2 0"/>
+    <SelectManifestation point="-4 0 2 0 -4 0"/>
+    <SelectManifestation point="-4 0 -2 0 -4 0"/>
+    <SelectManifestation point="-4 0 -4 0 -2 0"/>
+    <SelectManifestation point="-4 0 -4 0 2 0"/>
+    <SelectManifestation point="-4 0 -2 0 4 0"/>
+    <SelectManifestation point="-4 0 2 0 4 0"/>
+    <SelectManifestation point="-4 0 4 0 2 0"/>
+    <EndBlock/>
+    <Polygon/>
+    <BeginBlock/>
+    <SelectManifestation point="-4 0 -4 0 2 0"/>
+    <SelectManifestation point="-4 0 -4 0 -2 0"/>
+    <SelectManifestation point="-2 0 -4 0 -4 0"/>
+    <SelectManifestation point="2 0 -4 0 -4 0"/>
+    <SelectManifestation point="4 0 -4 0 -2 0"/>
+    <SelectManifestation point="4 0 -4 0 2 0"/>
+    <SelectManifestation point="2 0 -4 0 4 0"/>
+    <SelectManifestation point="-2 0 -4 0 4 0"/>
+    <EndBlock/>
+    <Polygon/>
+    <Hide/>
+    <BeginBlock/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation endSegment="2 0 2 0 -4 0" startSegment="0 0 0 0 0 0"/>
+    <SelectManifestation point="2 0 2 0 -4 0"/>
+    <EndBlock/>
+    <Delete/>
+    <SelectManifestation endSegment="4 0 2 0 -4 0" startSegment="2 0 2 0 -4 0"/>
+    <Delete/>
+    <ShowHidden/>
+    <BeginBlock/>
+    <SelectManifestation>
+      <polygonVertex at="-4 0 4 0 -2 0"/>
+      <polygonVertex at="-4 0 2 0 -4 0"/>
+      <polygonVertex at="-4 0 -2 0 -4 0"/>
+      <polygonVertex at="-4 0 -4 0 -2 0"/>
+      <polygonVertex at="-4 0 -4 0 2 0"/>
+      <polygonVertex at="-4 0 -2 0 4 0"/>
+      <polygonVertex at="-4 0 2 0 4 0"/>
+      <polygonVertex at="-4 0 4 0 2 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="-2 0 -4 0 -4 0"/>
+      <polygonVertex at="-4 0 -2 0 -4 0"/>
+      <polygonVertex at="-4 0 2 0 -4 0"/>
+      <polygonVertex at="-2 0 4 0 -4 0"/>
+      <polygonVertex at="2 0 4 0 -4 0"/>
+      <polygonVertex at="4 0 2 0 -4 0"/>
+      <polygonVertex at="4 0 -2 0 -4 0"/>
+      <polygonVertex at="2 0 -4 0 -4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="4 0 4 0 -2 0"/>
+      <polygonVertex at="4 0 4 0 2 0"/>
+      <polygonVertex at="4 0 2 0 4 0"/>
+      <polygonVertex at="4 0 -2 0 4 0"/>
+      <polygonVertex at="4 0 -4 0 2 0"/>
+      <polygonVertex at="4 0 -4 0 -2 0"/>
+      <polygonVertex at="4 0 -2 0 -4 0"/>
+      <polygonVertex at="4 0 2 0 -4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="4 0 -4 0 -2 0"/>
+      <polygonVertex at="2 0 -4 0 -4 0"/>
+      <polygonVertex at="4 0 -2 0 -4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="-2 0 -4 0 -4 0"/>
+      <polygonVertex at="-4 0 -4 0 -2 0"/>
+      <polygonVertex at="-4 0 -2 0 -4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="2 0 4 0 4 0"/>
+      <polygonVertex at="4 0 2 0 4 0"/>
+      <polygonVertex at="4 0 4 0 2 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="-2 0 4 0 4 0"/>
+      <polygonVertex at="-4 0 2 0 4 0"/>
+      <polygonVertex at="-4 0 -2 0 4 0"/>
+      <polygonVertex at="-2 0 -4 0 4 0"/>
+      <polygonVertex at="2 0 -4 0 4 0"/>
+      <polygonVertex at="4 0 -2 0 4 0"/>
+      <polygonVertex at="4 0 2 0 4 0"/>
+      <polygonVertex at="2 0 4 0 4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="4 0 4 0 -2 0"/>
+      <polygonVertex at="2 0 4 0 -4 0"/>
+      <polygonVertex at="-2 0 4 0 -4 0"/>
+      <polygonVertex at="-4 0 4 0 -2 0"/>
+      <polygonVertex at="-4 0 4 0 2 0"/>
+      <polygonVertex at="-2 0 4 0 4 0"/>
+      <polygonVertex at="2 0 4 0 4 0"/>
+      <polygonVertex at="4 0 4 0 2 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="-4 0 2 0 -4 0"/>
+      <polygonVertex at="-4 0 4 0 -2 0"/>
+      <polygonVertex at="-2 0 4 0 -4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="-4 0 4 0 2 0"/>
+      <polygonVertex at="-4 0 2 0 4 0"/>
+      <polygonVertex at="-2 0 4 0 4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="-2 0 -4 0 4 0"/>
+      <polygonVertex at="-4 0 -2 0 4 0"/>
+      <polygonVertex at="-4 0 -4 0 2 0"/>
+    </SelectManifestation>
+    <SelectManifestation point="4 0 -3 0 3 0"/>
+    <SelectManifestation point="4 0 -3 0 3 0"/>
+    <SelectManifestation>
+      <polygonVertex at="4 0 -2 0 4 0"/>
+      <polygonVertex at="2 0 -4 0 4 0"/>
+      <polygonVertex at="4 0 -4 0 2 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="4 0 4 0 -2 0"/>
+      <polygonVertex at="4 0 2 0 -4 0"/>
+      <polygonVertex at="2 0 4 0 -4 0"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <BookmarkTool name="tool-19"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-18" selectInputs="true"/>
+    <Delete/>
+    <ApplyTool copyColors="true" name="tool-18" selectInputs="true"/>
+    <setItemColor blue="0" green="76" red="220"/>
+    <SelectManifestation>
+      <polygonVertex at="-2 0 4 0 4 0"/>
+      <polygonVertex at="-4 0 2 0 4 0"/>
+      <polygonVertex at="-4 0 -2 0 4 0"/>
+      <polygonVertex at="-2 0 -4 0 4 0"/>
+      <polygonVertex at="2 0 -4 0 4 0"/>
+      <polygonVertex at="4 0 -2 0 4 0"/>
+      <polygonVertex at="4 0 2 0 4 0"/>
+      <polygonVertex at="2 0 4 0 4 0"/>
+    </SelectManifestation>
+    <ApplyTool copyColors="true" name="tool-19" selectInputs="true"/>
+    <setItemColor blue="0" green="76" red="220"/>
+    <BeginBlock/>
+    <SelectManifestation>
+      <polygonVertex at="-4 0 4 0 2 0"/>
+      <polygonVertex at="-4 0 2 0 4 0"/>
+      <polygonVertex at="-2 0 4 0 4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="-2 0 -4 0 4 0"/>
+      <polygonVertex at="-4 0 -2 0 4 0"/>
+      <polygonVertex at="-4 0 -4 0 2 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="4 0 -2 0 4 0"/>
+      <polygonVertex at="2 0 -4 0 4 0"/>
+      <polygonVertex at="4 0 -4 0 2 0"/>
+    </SelectManifestation>
+    <SelectManifestation point="3 0 3 0 4 0"/>
+    <SelectManifestation point="3 0 3 0 4 0"/>
+    <SelectManifestation>
+      <polygonVertex at="2 0 4 0 4 0"/>
+      <polygonVertex at="4 0 2 0 4 0"/>
+      <polygonVertex at="4 0 4 0 2 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="4 0 4 0 -2 0"/>
+      <polygonVertex at="4 0 2 0 -4 0"/>
+      <polygonVertex at="2 0 4 0 -4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="4 0 -4 0 -2 0"/>
+      <polygonVertex at="2 0 -4 0 -4 0"/>
+      <polygonVertex at="4 0 -2 0 -4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="-4 0 2 0 -4 0"/>
+      <polygonVertex at="-4 0 4 0 -2 0"/>
+      <polygonVertex at="-2 0 4 0 -4 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="-2 0 -4 0 -4 0"/>
+      <polygonVertex at="-4 0 -4 0 -2 0"/>
+      <polygonVertex at="-4 0 -2 0 -4 0"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <setItemColor blue="0" green="160" red="240"/>
+    <ApplyTool copyColors="true" name="tool-18" selectInputs="true"/>
+    <Delete/>
+    <Snapshot id="18"/>
+    <ApplyTool copyColors="true" name="tool-12" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-15" selectInputs="true"/>
+    <setItemColor blue="0" green="160" red="240"/>
+    <ApplyTool copyColors="true" name="tool-18" selectInputs="true"/>
+    <Delete/>
+    <ApplyTool copyColors="true" name="tool-13" selectInputs="true"/>
+    <Delete/>
+    <Snapshot id="19"/>
+    <ApplyTool copyColors="true" name="tool-18" selectInputs="true"/>
+    <ApplyTool copyColors="true" name="tool-14" selectInputs="true"/>
+    <DeselectAll/>
+    <Snapshot id="20"/>
   </EditHistory>
   <notes>
-    <page snapshot="9" title="Faces">
-      <ViewModel distance="223.3811492919922" far="446.7620849609375" near="0.5584526658058167" parallel="true" stereoAngle="0.0" width="100.52147674560547">
+    <page snapshot="18" title="Faces">
+      <ViewModel distance="82.17733001708984" far="164.35450744628906" near="0.20544332265853882" parallel="true" stereoAngle="0.0" width="36.97978210449219">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="2" title="Edges">
-      <ViewModel distance="223.3811492919922" far="446.7620849609375" near="0.5584526658058167" parallel="true" stereoAngle="0.0" width="100.52147674560547">
+    <page snapshot="17" title="Edges">
+      <ViewModel distance="82.17733001708984" far="164.35450744628906" near="0.20544332265853882" parallel="true" stereoAngle="0.0" width="36.97978210449219">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="3" title="Dual Faces">
-      <ViewModel distance="223.3811492919922" far="446.7620849609375" near="0.5584526658058167" parallel="true" stereoAngle="0.0" width="100.52147674560547">
+    <page snapshot="16" title="Dual Faces">
+      <ViewModel distance="82.17733001708984" far="164.35450744628906" near="0.20544332265853882" parallel="true" stereoAngle="0.0" width="36.97978210449219">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="4" title="Dual Edges">
-      <ViewModel distance="223.3811492919922" far="446.7620849609375" near="0.5584526658058167" parallel="true" stereoAngle="0.0" width="100.52147674560547">
+    <page snapshot="15" title="Dual Edges">
+      <ViewModel distance="82.17733001708984" far="164.35450744628906" near="0.20544332265853882" parallel="true" stereoAngle="0.0" width="36.97978210449219">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="10" title="Combined Faces">
-      <ViewModel distance="223.3811492919922" far="446.7620849609375" near="0.5584526658058167" parallel="true" stereoAngle="0.0" width="100.52147674560547">
+    <page snapshot="19" title="Combined Faces">
+      <ViewModel distance="82.17733001708984" far="164.35450744628906" near="0.20544332265853882" parallel="true" stereoAngle="0.0" width="36.97978210449219">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="5" title="Combined Edges">
-      <ViewModel distance="223.3811492919922" far="446.7620849609375" near="0.5584526658058167" parallel="true" stereoAngle="0.0" width="100.52147674560547">
+    <page snapshot="14" title="Combined edges">
+      <ViewModel distance="82.17733001708984" far="164.35450744628906" near="0.20544332265853882" parallel="true" stereoAngle="0.0" width="36.97978210449219">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="8" title="Complete">
-      <ViewModel distance="223.3811492919922" far="446.7620849609375" near="0.5584526658058167" parallel="true" stereoAngle="0.0" width="100.52147674560547">
-        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="0.0" y="1.0" z="0.0"/>
-        <LookDirection x="0.0" y="0.0" z="-1.0"/>
-      </ViewModel>
-      <content xml:space="preserve"/>
-    </page>
-    <page snapshot="11" title="Combined">
-      <ViewModel distance="223.3811492919922" far="446.7620849609375" near="0.5584526658058167" parallel="true" stereoAngle="0.0" width="100.52147674560547">
+    <page snapshot="20" title="Complete">
+      <ViewModel distance="82.17733001708984" far="164.35450744628906" near="0.20544332265853882" parallel="true" stereoAngle="0.0" width="36.97978210449219">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
@@ -902,13 +1221,13 @@
     <directionalLight color="30,30,30" x="0.0" y="0.0" z="-1.0"/>
   </sceneModel>
   <Viewing>
-    <ViewModel distance="214.62225341796875" far="429.24432373046875" near="0.5365554690361023" parallel="true" stereoAngle="0.0" width="96.5799789428711">
+    <ViewModel distance="82.17733001708984" far="164.35450744628906" near="0.20544332265853882" parallel="true" stereoAngle="0.0" width="36.97978210449219">
       <LookAtPoint x="0.0" y="0.0" z="0.0"/>
       <UpDirection x="0.0" y="1.0" z="0.0"/>
       <LookDirection x="0.0" y="0.0" z="-1.0"/>
     </ViewModel>
   </Viewing>
-  <SymmetrySystem name="octahedral" renderingStyle="ornate">
+  <SymmetrySystem name="octahedral" renderingStyle="small octahedra">
     <Direction color="0,142,194" name="blue" orbit="[[0,0,1],[0,0,1]]"/>
     <Direction color="255,255,255" name="0" orbit="[[2,0,3],[2,0,3]]" prototype="0 1/2 0 -1/2 0 -3/4"/>
     <Direction color="0,153,63" name="green" orbit="[[0,0,1],[-1,0,1]]"/>
@@ -929,9 +1248,17 @@
   </OtherSymmetries>
   <Tools>
     <Tool copyColors="true" deleteInputs="false" id="tool-0" label="bookmark 0" selectInputs="true"/>
-    <Tool copyColors="true" deleteInputs="false" id="tool-1" label="bookmark 1" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-1" label="construct" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-10" label="Edges both" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" id="tool-11" label="Edges combined" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-12" label="Combined Edges and faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-13" label="Edges only" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-14" label="Dual edges" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-15" label="Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-16" label="Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-17" label="Edges" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-18" label="Edges" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-19" label="Faces" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-2" label="Truncated cube" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-3" label="bookmark 3" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" id="tool-4" label="Truncated cube" selectInputs="true"/>
