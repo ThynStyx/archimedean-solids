@@ -34,20 +34,92 @@ td {
 		directly and submit Pull Requests (PR's) directly from branches in their own fork.
 	</p>
 	<p>
+		Note that additional information needs to be added to this document. Specifically, we still need some documentation 
+		on the purpose and effect of the post-processing step as well as how to apply it.
+	</p>
+	<p>
+		 We also need specific instruction on how to correctly generate a properly oriented and scaled Catalan solid 
+		from its Archimedean dual. Until I can provide this procedure, it's possible to use the 
+		<a href="https://www.vzome.com/app/inspector/" target="_blank" rel="noopener">vZome History Inspector</a>
+		to review the last half of the build history of any of the vZome files in the uploads\david-hall folder to 
+		reverse engineer the steps for generating a properly scaled and oriented Catalan solid 
+		as the dual of an existing Archimedian solid model.
+   </p>
+   <p>
 		As a general rule, all vZome files should:
 		<ol>
-			<li>Use the simplest (lowest order) algebraic field in which the model can be generated.</li>
-			<li>Have an edge length equal to the default blue or green strut in the applicable field and symmetry system. (e.g. B1 or G1)
-				The Root2 field is an exception. In the Root2 field, octahedral symmetry should be used 
-				and the strut length should equal "long blue" which also equals "long green".
+			<li>Be built in vZome desktop, not online vZome since online does not yet support naming scenes, and has a different default background color.
+				It also exports .shapes.json in a different format than vZome desktop.
 			</li>
-			<li>Retain the default vZome background color.</li>
-			<li>Either have the default scene contain only panels forming the Archimedean solid 
-				or else capture a scene containing only panels forming the Archimedean solid. Name the scene "Faces".
+			<li>Be named with only ASCII characters with no "special" characters. Generally, this means no spaces or punctuation, 
+				but only alphanumeric, undescore and hyphens. Specifically, the radical character should not be used for file names, 
+				but rather "Root2" or simlar since the radical character is problematic for some use cases. 
 			</li>
-			<li>Have the centroid  located at the origin.</li>
-			<li>Include the name(s) of the Archimedean solid(s) in the file name.</li>
-			<li>Include a corresponding .shapes.json file. This happens automatically when the model is published directly from vZome desktop.</li>
+			<li>Export an associated .shapes.json file having the same file name as the vZome model, differing only in the file extension.
+				This all happens automatically when the model is published to vzome-sharing directly from vZome desktop.
+				If the export is generated from the menu rather than using vzome-sharing, then the .shapes.json file must be exported 
+				in the desktop "polygons" format, not the desktop "triangles" format or the online format. 
+				This is because the post-processing depends specifically on the desktop "polygons" json format.  
+			</li>
+			<li>Use the simplest (lowest order) algebraic field in which the model can be generated. 
+				In the case of the Archamedean solids and their duals, the Catalans, that will be either the golden field 
+				or the root2 field, except for the two snub solids which must use the fields bearing their respective names.
+			</li>
+			<li>Orient the model to the symmetry (octahedral or icosahedral) that corresponds to the symmetry of the model itself
+				and minimizes the number of "alternate" orienations. This should be considered the "canonical" orientation.
+				It will normally be the icosahedral symmetry systen if the Archimedean or Catalan solid has "Icosahedron" or "Dodecahedron" 
+				in its name. Otherwise, it will be the octahedral symmetry system. In the case of the Truncated Tetrahedron,
+				it should be oriented in the octahedral symmetry system with one vertex on the yellow line in the {1,1,1} direction.
+				Note that its is also possible to orient it in the octahedral symmetry system with a vertex on any yellow orbit,
+				so the one with all positive vector components has been designated as the "canonical" tetrahedron's orientation.  
+				For example, the Truncated Octahedron uses green struts in the golden field. That means it's possible to build it 
+				in either the octahedral or icosahedral symmetry system. However, in the icosaahedral symmetry system, 
+				it can have any of 5 different orienations, all having green struts, whereas in the octahedral symmetry system, 
+				it has only one orientation with green orbits. That orientation is the only one that is green in both octahedral 
+				and icosahedral symmetries, so that's considered the "canonical orientation.".
+			</li>	
+			<li>Regardless which symmetry system is used for <b>orientating</b> the model, if the model is in the golden field,
+				the icosahedral symmetry system should be active and the shapes should be set to "lifelike" immediately before 
+				capturing any scenes and also when saving the vZome model or exporting .shapes.json. 
+				This ensures that lifelike balls and struts will be displayed when the models are used on the web site.  
+			</li>
+			<li>Have a consistent edge length for the Archimedean solids. In the golden field, the strut length should be B0 or G0 
+				with the Catalan strut lengths being derived from their duals. Note that the Catalans do not have uniform edge lengths,
+				therefore their strut lengths can't be specified except to say that they are derived from their duals, 
+				as will be described elsewhere. 
+				Note that the B0 and G0 lengths used here are shorter than the default B1 and G1 lengths used on the Johnson solids page,
+				because by the time this document was reviewed, all of the Archamedean solids and about half of the Catalan models
+				had already been built using B0 and G0 and it resizing them to match the Johnson solids site was deemed not worth the effort. 
+				In any field other than the golden field, the strut lengths are not critical, 
+				nor is the choice of ball styles because balls and struts are only shown in the golden field.
+				In the non-golden fields, the default B1 length is prefereable though not required, 
+				as is the default ball shape in octahedral symmetry.
+			</li>
+			<li>Retain the default vZome desktop background color. This is different from the default background color in online vZome.</li>
+			<li>Capture a scene containing only balls and struts forming the Archimedean solid. Name the scene "Edges".
+			</li>
+			<li>Capture a scene containing only panels forming the Archimedean solid. Name the scene "Faces".
+			</li>
+			<li>Capture a scene containing only balls and struts forming the Catalan solid. Name the scene "Dual Edges".
+			</li>
+			<li>Capture a scene containing only panels forming the Catalan solid. Name the scene "Dual Faces".
+			</li>
+			<li>Capture a scene containing only balls and struts forming both the Archimedean and Catalan solid. Name the scene "Combined Edges".
+			</li>
+			<li>Capture a scene containing only panels forming both the Archimedean and Catalan solid. Name the scene "Combined Faces".
+			</li>
+			<li>Capture a scene containing all balls, struts and panels forming both the Archimedean and Catalan solid. Name the scene "Complete".
+			</li>
+			<li>Note that the scene criteria and naming convention for the two snub fields is different from all other models 
+				since they never render edges, but do render their chiral twins. The criteria and naming convention for the two snub solids
+				is established in the existing files though not specified here except to note that they differ from all other solids.
+			</li>
+			<li>Have the centroid of the model located at the origin.</li>
+			<li>Have the camera "looking at" the origin and zoomed so the model roughly fills the viewport.
+				The camera orientation and zoom level are not critical since they are overridden 
+				in post-processing, but it's important that the camera's center and model's centroid both be at the origin..</li>
+			<li>Have the ball at the origin removed prior to capturing any scenes or saving or exporting the model.</li>
+			<li>Include the recognizable canonical name of the Archimedean solid in the file name.</li>
 		</ol>
 		<a href="https://www.zometool.com" target="_blank" rel="noopener">Zometool</a> constructible models should comply with these additional guidelines:
 		<ol>
@@ -64,14 +136,17 @@ td {
 		</ul>
 	</p>
 	<p>
-		Each scene must have a unique name. No scene should be named "default scene" since that is reserved for the main model.
+		Each scene must have a unique non-blank name. No scene should be named "default scene" since that is reserved for the main model.
 	</p>
 	<h3>Colors</h3> 
 	<p>
-		All struts should retain their default vZome colors since they are only shown when the models are zometool constructible
+		All balls struts should retain their default vZome colors since they are only shown when the models are zometool constructible
 		in which case, they will thereby match the actual zometool strut colors.<br>
 		Panels should use a common coloring scheme for all models, based on the default vZome strut colors in icosahedral symmetry.<br>
-		The following colors should be used for the corresponding types of faces regardless of the field in which it is built.
+		The following colors were specified in the Johnson Solids app for the corresponding types of faces regardless of the field in which they were built.
+		However, the post-processing that was subsequently developed and then refined for use on the Archimedean Solids site
+		overrides the panel colors in .shapes.json making this step unnecessary iin the vZome file. The following table is therefore,
+		retained only as a reference during development and may in fact be out of date anyway.
 		<table>
 			<tr><td> Triangles </td><td> Yellow </td><td> rgb( 240, 160,   0 ) </td></tr>
 			<tr><td> Squares   </td><td> Blue   </td><td> rgb(   0, 118, 149 ) </td></tr>
@@ -84,14 +159,14 @@ td {
 	<p>
 		Some of these criteria are necessary for proper operation of the site. Others are just conventions and preferences 
 		based on our discussions on Discord. 
-		Feel free to post suggestions and questions regarding this site on <a href="https://discord.com/channels/808488427400986724/1176604061294936114" 
+		Feel free to post suggestions and questions regarding this site on <a href="https://discord.com/channels/808488427400986724/1319060682884255857" 
 			target="_blank" rel="noopener">Discord</a>.
 	</p>
 	<h2>
 		References
 	</h2> 
 	<p>
-		Join us on <a href="https://discord.com/channels/808488427400986724/1176604061294936114" 
+		Join us on <a href="https://discord.com/channels/808488427400986724/1319060682884255857" 
 			target="_blank" rel="noopener">Discord</a>
 	</p>  
 </body>
