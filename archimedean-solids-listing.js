@@ -18,6 +18,7 @@ const sigfig = 1000000000; // significant digits for rounding
 const fixedBackgroundColor = "#AFC8DC";
 
 const shapeColors = new Map();
+// TODO: Any changes to these colors should be updated in READM.html as well
 shapeColors.set( 3, "#F0A000"); // yellow strut
 shapeColors.set( 4, "#007695"); // blue strut
 shapeColors.set( 5, "#AF0000"); // red strut
