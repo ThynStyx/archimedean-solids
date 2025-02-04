@@ -408,7 +408,7 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="7" title="Combined faces">
+    <page snapshot="7" title="Combined Faces">
       <ViewModel distance="94.52642822265625" far="189.0528564453125" near="0.08752447366714478" parallel="true" stereoAngle="0.0" width="42.53689193725586">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
