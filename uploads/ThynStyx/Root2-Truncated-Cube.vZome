@@ -1099,7 +1099,7 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="10" title="Dual faces">
+    <page snapshot="10" title="Dual Faces">
       <ViewModel distance="115.454833984375" far="230.90966796875" near="0.10690263658761978" parallel="true" stereoAngle="0.0" width="51.95466995239258">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
@@ -1107,7 +1107,7 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="11" title="Dual edges">
+    <page snapshot="11" title="Dual Edges">
       <ViewModel distance="115.454833984375" far="230.90966796875" near="0.10690263658761978" parallel="true" stereoAngle="0.0" width="51.95466995239258">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
