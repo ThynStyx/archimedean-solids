@@ -1083,14 +1083,6 @@
     <setItemColor blue="0" green="76" red="220"/>
   </EditHistory>
   <notes>
-    <page snapshot="13" title="Faces">
-      <ViewModel distance="115.454833984375" far="230.90966796875" near="0.10690263658761978" parallel="true" stereoAngle="0.0" width="51.95466995239258">
-        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="0.0" y="1.0" z="0.0"/>
-        <LookDirection x="0.0" y="0.0" z="-1.0"/>
-      </ViewModel>
-      <content xml:space="preserve"/>
-    </page>
     <page snapshot="12" title="Edges">
       <ViewModel distance="115.454833984375" far="230.90966796875" near="0.10690263658761978" parallel="true" stereoAngle="0.0" width="51.95466995239258">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
@@ -1099,7 +1091,7 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="10" title="Dual Faces">
+    <page snapshot="13" title="Faces">
       <ViewModel distance="115.454833984375" far="230.90966796875" near="0.10690263658761978" parallel="true" stereoAngle="0.0" width="51.95466995239258">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
@@ -1115,7 +1107,7 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="8" title="Combined Faces">
+    <page snapshot="10" title="Dual Faces">
       <ViewModel distance="115.454833984375" far="230.90966796875" near="0.10690263658761978" parallel="true" stereoAngle="0.0" width="51.95466995239258">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
@@ -1126,8 +1118,16 @@
     <page snapshot="14" title="Combined Edges">
       <ViewModel distance="115.454833984375" far="230.90966796875" near="0.10690263658761978" parallel="true" stereoAngle="0.0" width="51.95466995239258">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="-0.013822652399539948" y="0.9998440146446228" z="-0.010999039746820927"/>
-        <LookDirection x="-0.004220759496092796" y="-0.011058120056986809" z="-0.999930202960968"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="8" title="Combined Faces">
+      <ViewModel distance="115.454833984375" far="230.90966796875" near="0.10690263658761978" parallel="true" stereoAngle="0.0" width="51.95466995239258">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>

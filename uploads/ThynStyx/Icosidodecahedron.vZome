@@ -192,7 +192,9 @@
     <SelectManifestation point="0 0 0 0 2 4"/>
     <SelectManifestation point="1 1 1 2 2 3"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <PanelCentroids/>
     <BeginBlock/>
     <DeselectAll/>
@@ -212,7 +214,9 @@
     <SelectManifestation point="2 3 -1 -1 1 2"/>
     <SelectManifestation point="2 3 1 1 1 2"/>
     <EndBlock/>
-    <Polygon/>
+    <Polygon>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Polygon>
     <PanelCentroids/>
     <BeginBlock/>
     <DeselectAll/>
@@ -226,7 +230,9 @@
     <EndBlock/>
     <Delete/>
     <SelectManifestation endSegment="1 1 1 2 2 3" startSegment="0 0 0 0 2 4"/>
-    <Midpoint/>
+    <Midpoint>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Midpoint>
     <BeginBlock/>
     <DeselectAll/>
     <SelectManifestation point="1/2 1/2 1/2 1 2 7/2"/>
@@ -362,14 +368,6 @@
     <Snapshot id="9"/>
   </EditHistory>
   <notes>
-    <page snapshot="2" title="Faces">
-      <ViewModel distance="94.52642822265625" far="189.0528564453125" near="0.23631606996059418" parallel="true" stereoAngle="0.0" width="42.536895751953125">
-        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-        <UpDirection x="0.0" y="1.0" z="0.0"/>
-        <LookDirection x="0.0" y="0.0" z="-1.0"/>
-      </ViewModel>
-      <content xml:space="preserve"/>
-    </page>
     <page snapshot="3" title="Edges">
       <ViewModel distance="94.52642822265625" far="189.0528564453125" near="0.23631606996059418" parallel="true" stereoAngle="0.0" width="42.536895751953125">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
@@ -378,8 +376,8 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="6" title="Dual Faces">
-      <ViewModel distance="94.52642822265625" far="189.0528564453125" near="0.08752447366714478" parallel="true" stereoAngle="0.0" width="42.53689193725586">
+    <page snapshot="2" title="Faces">
+      <ViewModel distance="94.52642822265625" far="189.0528564453125" near="0.23631606996059418" parallel="true" stereoAngle="0.0" width="42.536895751953125">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
@@ -394,7 +392,7 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="7" title="Combined Faces">
+    <page snapshot="6" title="Dual Faces">
       <ViewModel distance="94.52642822265625" far="189.0528564453125" near="0.08752447366714478" parallel="true" stereoAngle="0.0" width="42.53689193725586">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
@@ -403,6 +401,14 @@
       <content xml:space="preserve"/>
     </page>
     <page snapshot="8" title="Combined Edges">
+      <ViewModel distance="94.52642822265625" far="189.0528564453125" near="0.08752447366714478" parallel="true" stereoAngle="0.0" width="42.53689193725586">
+        <LookAtPoint x="0.0" y="0.0" z="0.0"/>
+        <UpDirection x="0.0" y="1.0" z="0.0"/>
+        <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      </ViewModel>
+      <content xml:space="preserve"/>
+    </page>
+    <page snapshot="7" title="Combined faces">
       <ViewModel distance="94.52642822265625" far="189.0528564453125" near="0.08752447366714478" parallel="true" stereoAngle="0.0" width="42.53689193725586">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
