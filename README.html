@@ -7,6 +7,9 @@
 	<title>Making Archimedean Solids with vZome</title>
 	<meta name="description" content="A collection of the Archimedean solids, using vZome technology"/>
 	<meta name="keywords" content="geometry,zome,vzome,Archimedean solids"/>
+    <meta property="og:image"  content="/archimedean-solids/Card-image.png"/>
+    <meta name="twitter:image" content="/archimedean-solids/Card-image.png"/>
+  	<link rel="shortcut icon" type="image/x-icon" href="/archimedean-solids/favicon.ico">
 	<style>
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -30,7 +33,7 @@ td {
 </head>
 <body>
 	<h1>
-		A collection of the <a href="./?ready=1">Archimedean Solids</a> using <a href="https://vzome.com" target="_blank" rel="noopener">vZome</a> technology
+		A collection of the <a href="./" target="_blank" rel="noopener">Archimedean Solids</a> using <a href="https://vzome.com" target="_blank" rel="noopener">vZome</a> technology
 	</h1>    
 	<h2>
 		Guidelines for contributing vZome models
@@ -102,6 +105,8 @@ td {
 				as is the default ball shape in octahedral symmetry.
 			</li>
 			<li>Retain the default vZome desktop background color. This is different from the default background color in online vZome.</li>
+			<li>The order of scenes in the vZome file doesn't matter as long as they are all present. Additional scenes are ignored.
+			</li>
 			<li>Note that scene names are case sensitive and must use "First Letter Caps" as shown.
 			</li>
 			<li>Capture a scene containing only balls and struts forming the Archimedean solid. Name the scene "Edges".
@@ -148,21 +153,24 @@ td {
 	</p>
 	<h3>Colors</h3> 
 	<p>
+	  <ul>
+		<li>
 		All balls struts should retain their default vZome colors since they are only shown when the models are zometool constructible
-		in which case, they will thereby match the actual zometool strut colors.<br>
-		Panels should use a common coloring scheme for all models, based on the default vZome strut colors in icosahedral symmetry.<br>
-		The following colors were specified in the Johnson Solids app for the corresponding types of faces regardless of the field in which they were built.
-		However, the post-processing that was subsequently developed and then refined for use on the Archimedean Solids site
-		overrides the panel colors in .shapes.json making this step unnecessary iin the vZome file. The following table is therefore,
-		retained only as a reference during development and may in fact be out of date anyway.
+		in which case, they will thereby match the actual zometool strut colors.
+		</li>
+		<li>
+		It is unnecessary (but harmless) to adjust panel colors in the vZome file because 
+		the post-processing step will set the panel colors in .shapes.json according to the following table.<br>
 		<table>
-			<tr><td> Triangles </td><td> Yellow </td><td> rgb( 240, 160,   0 ) </td></tr>
-			<tr><td> Squares   </td><td> Blue   </td><td> rgb(   0, 118, 149 ) </td></tr>
-			<tr><td> Pentagons </td><td> Red    </td><td> rgb( 175,   0,   0 ) </td></tr>
-			<tr><td> Hexagons  </td><td> Green  </td><td> rgb(   0, 141,  45 ) </td></tr>
-			<tr><td> Octagons  </td><td> Orange </td><td> rgb( 220,  76,   0 ) </td></tr>
-			<tr><td> Decagons  </td><td> Purple </td><td> rgb( 108,   0, 198 ) </td></tr>
+			<tr><td> Triangles </td><td> Yellow </td><td> rgb( 240, 160,   0 ) </td><td> #F0A000 </td></tr>
+			<tr><td> Squares   </td><td> Blue   </td><td> rgb(   0, 118, 149 ) </td><td> #007695 </td></tr>
+			<tr><td> Pentagons </td><td> Red    </td><td> rgb( 175,   0,   0 ) </td><td> #AF0000 </td></tr>
+			<tr><td> Hexagons  </td><td> Green  </td><td> rgb(   0, 141,  54 ) </td><td> #008D36 </td></tr>
+			<tr><td> Octagons  </td><td> Orange </td><td> rgb( 220,  76,   0 ) </td><td> #DC4C00 </td></tr>
+			<tr><td> Decagons  </td><td> Purple </td><td> rgb( 108,   0, 198 ) </td><td> #6C00C6 </td></tr>
 		</table>
+		</li>
+	  </ul>
 	</p>
 	<p>
 		Some of these criteria are necessary for proper operation of the site. Others are just conventions and preferences 
