@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="95" field="rootTwo" version="7.1">
-  <EditHistory editNumber="722" lastStickyEdit="722">
+  <EditHistory editNumber="761" lastStickyEdit="761">
     <StrutCreation anchor="0 0 0 0 0 0" dir="green" index="0" len="0 2" symm="octahedral"/>
     <StrutCreation anchor="0 0 0 0 0 0" index="12" len="0 2" symm="octahedral"/>
     <StrutCreation anchor="0 -2 0 0 0 0" dir="green" index="12" len="0 2" symm="octahedral"/>
@@ -703,7 +703,9 @@
     <DeselectAll/>
     <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="SELECT" struts="IGNORE"/>
     <EndBlock/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <BeginBlock/>
     <AdjustSelectionByClass balls="SELECT" originLast="true" panels="IGNORE" struts="IGNORE"/>
     <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="IGNORE" struts="SELECT"/>
@@ -717,7 +719,9 @@
     <Delete/>
     <Snapshot id="7"/>
     <SelectAll originLast="true"/>
-    <Hide/>
+    <Hide>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Hide>
     <ApplyTool copyColors="true" name="tool-7" selectInputs="true"/>
     <DeselectAll/>
     <Snapshot id="8"/>
@@ -741,7 +745,9 @@
     <DeselectAll/>
     <SelectManifestation endSegment="0 -2 4 2 0 2" startSegment="0 -2 0 2 4 2"/>
     <EndBlock/>
-    <Midpoint/>
+    <Midpoint>
+      <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+    </Midpoint>
     <BeginBlock/>
     <SelectManifestation point="0 -2 2 2 2 2"/>
     <SelectManifestation point="0 -2 2 2 2 2"/>
@@ -788,61 +794,152 @@
     <SelectManifestation point="0 0 0 4 0 4"/>
     <InvertSelection/>
     <EndBlock/>
+    <Branch>
+      <Delete/>
+      <BeginBlock/>
+      <SelectManifestation point="-8/7 -16/7 8/7 16/7 8/7 16/7"/>
+      <SelectManifestation point="0 0 0 4 0 4"/>
+      <EndBlock/>
+      <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
+      <setItemColor blue="255" green="255" red="255"/>
+      <AdjustSelectionByClass balls="SELECT" originLast="true" panels="IGNORE" struts="IGNORE"/>
+      <ConvexHull3d mode="noPanels"/>
+      <BookmarkTool name="tool-9"/>
+      <DeselectAll/>
+      <Snapshot id="9"/>
+      <ApplyTool copyColors="true" name="tool-9" selectInputs="true"/>
+      <ConvexHull3d mode="onlyPanels"/>
+      <DeselectAll/>
+      <ApplyTool copyColors="true" name="tool-9" selectInputs="true"/>
+      <Delete/>
+      <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="SELECT" struts="IGNORE"/>
+      <BookmarkTool name="tool-10"/>
+      <DeselectAll/>
+      <Snapshot id="10"/>
+      <ApplyTool copyColors="true" name="tool-9" selectInputs="true"/>
+      <DeselectAll/>
+      <ApplyTool copyColors="true" name="tool-10" selectInputs="true"/>
+      <Delete/>
+      <ApplyTool copyColors="true" name="tool-7" selectInputs="true"/>
+      <DeselectAll/>
+      <Snapshot id="11"/>
+      <ApplyTool copyColors="true" name="tool-10" selectInputs="true"/>
+      <ApplyTool copyColors="true" name="tool-8" selectInputs="true"/>
+      <BeginBlock/>
+      <DeselectAll/>
+      <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="IGNORE" struts="SELECT"/>
+      <AdjustSelectionByClass balls="SELECT" originLast="true" panels="IGNORE" struts="IGNORE"/>
+      <EndBlock/>
+      <Branch>
+        <Hide>
+          <Boolean attrName="org.vorthmann.zome.editor.Command.LOADING_FROM_FILE" value="true"/>
+        </Hide>
+        <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="SELECT" struts="IGNORE"/>
+        <BookmarkTool name="tool-11"/>
+        <DeselectAll/>
+        <Snapshot id="12"/>
+      </Branch>
+      <DeselectAll/>
+      <ApplyTool copyColors="true" name="tool-11" selectInputs="true"/>
+      <Delete/>
+      <BeginBlock/>
+      <AdjustSelectionByClass balls="SELECT" originLast="true" panels="IGNORE" struts="IGNORE"/>
+      <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="IGNORE" struts="SELECT"/>
+      <EndBlock/>
+      <BookmarkTool name="tool-12"/>
+      <DeselectAll/>
+      <ApplyTool copyColors="true" name="tool-11" selectInputs="true"/>
+      <BookmarkTool name="tool-13"/>
+      <DeselectAll/>
+      <Snapshot id="13"/>
+    </Branch>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 -2 0 2 4 2"/>
+    <SelectManifestation point="0 -2 0 -2 4 2"/>
+    <SelectManifestation point="0 -2 0 -2 4 2"/>
+    <SelectManifestation point="0 2 0 -2 4 2"/>
+    <EndBlock/>
+    <JoinPoints closedLoop="false"/>
+    <Midpoint/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="0 2 0 -2 4 2" startSegment="0 -2 0 2 4 2"/>
+    <EndBlock/>
+    <Delete/>
+    <SelectManifestation endSegment="0 -2 0 2 4 2" startSegment="0 2 0 2 4 2"/>
+    <Midpoint/>
+    <BeginBlock/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="0 0 0 0 4 2"/>
+    <EndBlock/>
+    <JoinPoints closedLoop="false"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 0 0"/>
+    <SelectManifestation point="0 0 0 2 4 2"/>
+    <SelectManifestation point="0 -2 0 2 4 2"/>
+    <EndBlock/>
+    <CrossProduct/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation endSegment="0 0 -1 1 5 2" startSegment="0 0 0 2 4 2"/>
+    <SelectManifestation endSegment="0 0 0 0 4 2" startSegment="0 0 0 0 0 0"/>
+    <EndBlock/>
+    <StrutIntersection/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation point="0 0 0 0 8 0"/>
+    <EndBlock/>
+    <setItemColor blue="0" green="0" red="0"/>
+    <BeginBlock/>
+    <SelectManifestation point="-8/7 -16/7 8/7 16/7 8/7 16/7"/>
+    <SelectManifestation point="0 0 0 0 8 0"/>
+    <SelectManifestation point="0 0 0 4 0 4"/>
+    <InvertSelection/>
+    <EndBlock/>
     <Delete/>
     <BeginBlock/>
     <SelectManifestation point="-8/7 -16/7 8/7 16/7 8/7 16/7"/>
+    <SelectManifestation point="0 0 0 0 8 0"/>
     <SelectManifestation point="0 0 0 4 0 4"/>
     <EndBlock/>
     <ApplyTool copyColors="true" name="octahedral.builtin/octahedral around origin" selectInputs="true"/>
     <setItemColor blue="255" green="255" red="255"/>
     <AdjustSelectionByClass balls="SELECT" originLast="true" panels="IGNORE" struts="IGNORE"/>
     <ConvexHull3d mode="noPanels"/>
-    <BookmarkTool name="tool-9"/>
+    <BookmarkTool name="tool-14"/>
+    <BookmarkTool name="tool-15"/>
     <DeselectAll/>
-    <Snapshot id="9"/>
-    <ApplyTool copyColors="true" name="tool-9" selectInputs="true"/>
+    <Snapshot id="14"/>
+    <ApplyTool copyColors="true" name="tool-15" selectInputs="true"/>
     <ConvexHull3d mode="onlyPanels"/>
     <DeselectAll/>
-    <ApplyTool copyColors="true" name="tool-9" selectInputs="true"/>
+    <ApplyTool copyColors="true" name="tool-15" selectInputs="true"/>
     <Delete/>
     <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="SELECT" struts="IGNORE"/>
-    <BookmarkTool name="tool-10"/>
+    <MapToColor colorMapper="SystemColorMap" symmetry="octahedral"/>
+    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="SELECT" struts="IGNORE"/>
+    <BookmarkTool name="tool-16"/>
     <DeselectAll/>
-    <Snapshot id="10"/>
-    <ApplyTool copyColors="true" name="tool-9" selectInputs="true"/>
-    <DeselectAll/>
-    <ApplyTool copyColors="true" name="tool-10" selectInputs="true"/>
+    <Snapshot id="15"/>
+    <ApplyTool copyColors="true" name="tool-16" selectInputs="true"/>
     <Delete/>
+    <ApplyTool copyColors="true" name="tool-15" selectInputs="true"/>
+    <DeselectAll/>
     <ApplyTool copyColors="true" name="tool-7" selectInputs="true"/>
     <DeselectAll/>
-    <Snapshot id="11"/>
-    <ApplyTool copyColors="true" name="tool-10" selectInputs="true"/>
-    <ApplyTool copyColors="true" name="tool-8" selectInputs="true"/>
-    <BeginBlock/>
-    <DeselectAll/>
-    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="IGNORE" struts="SELECT"/>
-    <AdjustSelectionByClass balls="SELECT" originLast="true" panels="IGNORE" struts="IGNORE"/>
-    <EndBlock/>
-    <Branch>
-      <Hide/>
-      <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="SELECT" struts="IGNORE"/>
-      <BookmarkTool name="tool-11"/>
-      <DeselectAll/>
-      <Snapshot id="12"/>
-    </Branch>
-    <DeselectAll/>
-    <ApplyTool copyColors="true" name="tool-11" selectInputs="true"/>
+    <Snapshot id="16"/>
+    <SelectAll originLast="true"/>
+    <BookmarkTool name="tool-17"/>
     <Delete/>
-    <BeginBlock/>
-    <AdjustSelectionByClass balls="SELECT" originLast="true" panels="IGNORE" struts="IGNORE"/>
-    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="IGNORE" struts="SELECT"/>
-    <EndBlock/>
-    <BookmarkTool name="tool-12"/>
+    <ApplyTool copyColors="true" name="tool-16" selectInputs="true"/>
+    <ApplyTool copyColors="true" name="tool-8" selectInputs="true"/>
     <DeselectAll/>
-    <ApplyTool copyColors="true" name="tool-11" selectInputs="true"/>
-    <BookmarkTool name="tool-13"/>
+    <Snapshot id="17"/>
+    <ApplyTool copyColors="true" name="tool-17" selectInputs="true"/>
     <DeselectAll/>
-    <Snapshot id="13"/>
+    <Snapshot id="18"/>
   </EditHistory>
   <notes>
     <page snapshot="8" title="Edges">
@@ -861,40 +958,40 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="9" title="Dual Edges">
-      <ViewModel distance="75.85923767089844" far="151.7184600830078" near="0.07024004310369492" parallel="true" stereoAngle="0.0" width="34.13665771484375">
+    <page snapshot="14" title="Dual Edges">
+      <ViewModel distance="77.39169311523438" far="154.7833709716797" near="0.07165898382663727" parallel="true" stereoAngle="0.0" width="34.826263427734375">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="10" title="Dual Faces">
-      <ViewModel distance="75.85923767089844" far="151.7184600830078" near="0.07024004310369492" parallel="true" stereoAngle="0.0" width="34.13665771484375">
+    <page snapshot="15" title="Dual Faces">
+      <ViewModel distance="77.39169311523438" far="154.7833709716797" near="0.07165898382663727" parallel="true" stereoAngle="0.0" width="34.826263427734375">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="11" title="Combined Edges">
-      <ViewModel distance="75.85923767089844" far="151.7184600830078" near="0.07024004310369492" parallel="true" stereoAngle="0.0" width="34.13665771484375">
+    <page snapshot="16" title="Combined Edges">
+      <ViewModel distance="77.39169311523438" far="154.7833709716797" near="0.07165898382663727" parallel="true" stereoAngle="0.0" width="34.826263427734375">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="12" title="Combined Faces">
-      <ViewModel distance="75.85923767089844" far="151.7184600830078" near="0.07024004310369492" parallel="true" stereoAngle="0.0" width="34.13665771484375">
+    <page snapshot="17" title="Combined Faces">
+      <ViewModel distance="77.39169311523438" far="154.7833709716797" near="0.07165898382663727" parallel="true" stereoAngle="0.0" width="34.826263427734375">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="13" title="Complete">
-      <ViewModel distance="75.85923767089844" far="151.7184600830078" near="0.07024004310369492" parallel="true" stereoAngle="0.0" width="34.13665771484375">
+    <page snapshot="18" title="Complete">
+      <ViewModel distance="77.39169311523438" far="154.7833709716797" near="0.07165898382663727" parallel="true" stereoAngle="0.0" width="34.826263427734375">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
         <LookDirection x="0.0" y="0.0" z="-1.0"/>
@@ -908,7 +1005,7 @@
     <directionalLight color="30,30,30" x="0.0" y="0.0" z="-1.0"/>
   </sceneModel>
   <Viewing>
-    <ViewModel distance="37.67058181762695" far="75.3411636352539" near="0.03488016873598099" parallel="false" stereoAngle="0.0" width="16.95176124572754">
+    <ViewModel distance="77.39169311523438" far="154.7833709716797" near="0.07165898382663727" parallel="false" stereoAngle="0.0" width="34.826263427734375">
       <LookAtPoint x="0.0" y="0.0" z="0.0"/>
       <UpDirection x="0.0" y="1.0" z="0.0"/>
       <LookDirection x="0.0" y="0.0" z="-1.0"/>
@@ -920,6 +1017,7 @@
     <Direction color="0,153,63" name="green" orbit="[[0,0,1],[-1,0,1]]"/>
     <Direction color="107,53,26" name="brown" orbit="[[1,0,1],[-2,0,1]]"/>
     <Direction color="255,179,26" name="yellow" orbit="[[1,0,1],[-1,0,1]]"/>
+    <Direction color="255,255,255" name="2" orbit="[[-1,1,1],[0,0,1]]" prototype="0 0 0 -1/2 -1 -1/2"/>
     <Direction color="255,255,255" name="1" orbit="[[-1,1,1],[-1,1,1]]" prototype="-4/7 6/7 -8/7 -2/7 -4/7 6/7"/>
   </SymmetrySystem>
   <OtherSymmetries>
@@ -933,10 +1031,14 @@
   <Tools>
     <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-0" label="Balls and struts" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-1" label="Faces" selectInputs="true"/>
-    <Tool copyColors="true" deleteInputs="false" id="tool-10" label="Dual Faces" selectInputs="true"/>
-    <Tool copyColors="true" deleteInputs="false" id="tool-11" label="Combined Faces" selectInputs="true"/>
-    <Tool copyColors="true" deleteInputs="false" id="tool-12" label="Combined Edges" selectInputs="true"/>
-    <Tool copyColors="true" deleteInputs="false" id="tool-13" label="Combined Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-10" label="Dual Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-11" label="Combined Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-12" label="Combined Edges" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-13" label="Combined Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-14" label="bookmark 14" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-15" label="Dual Edges" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-16" label="Dual Faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-17" label="Combined Edges" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="true" id="tool-2" label="translation 2" selectInputs="false"/>
     <Tool copyColors="true" deleteInputs="true" id="tool-3" label="translation 3" selectInputs="false"/>
     <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-4" label="Faces" selectInputs="true"/>
@@ -944,6 +1046,6 @@
     <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-6" label="bookmark 6" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" id="tool-7" label="Edges" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" id="tool-8" label="Faces" selectInputs="true"/>
-    <Tool copyColors="true" deleteInputs="false" id="tool-9" label="Dual Struts" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-9" label="Dual Struts" selectInputs="true"/>
   </Tools>
 </vzome:vZome>
