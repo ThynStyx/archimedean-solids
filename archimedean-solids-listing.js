@@ -88,11 +88,10 @@ function standardizeCameras(modelData) {
 	// Adjust all camera vector settings to the same values
 	// and zoom levels so that any model that's the first one loaded will be zoomed to fit
 	// and others will use the same initial zoom level.
-	// Any model could be the one that sets the default camera if the "J=" queryparam is used.
+	// Any model could be the one that sets the default camera if the "A=" queryparam is used.
 	const distance = getDistanceScaledToFitView(modelData);
 	standardizeCamera(modelData.camera, distance);
 	for(let scene of modelData.scenes) {
-		// scene views are not used by the Johnson solids app, but we'll standardize their cameras too since we're here
 		// online json uses scene.camera where desktop json uses scene.view for basically the same object
 		standardizeCamera(modelData.format == "online" ? scene.camera : scene.view, distance);
 	}
