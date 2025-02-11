@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="93" field="rootTwo" version="7.1">
-  <EditHistory editNumber="672" lastStickyEdit="638">
+<vzome:vZome xmlns:vzome="http://xml.vzome.com/vZome/4.0.0/" buildNumber="95" field="rootTwo" version="7.1">
+  <EditHistory editNumber="726" lastStickyEdit="697">
     <StrutCreation anchor="0 0 0 0 0 0" index="0" len="0 4" symm="octahedral"/>
     <StrutCreation anchor="0 4 0 0 0 0" index="7" len="0 4" symm="octahedral"/>
     <StrutCreation anchor="0 4 0 0 0 0" dir="brown" index="9" len="2 0" symm="octahedral"/>
@@ -1081,6 +1081,127 @@
     </SelectManifestation>
     <EndBlock/>
     <setItemColor blue="0" green="76" red="220"/>
+    <SelectAll originLast="true"/>
+    <Delete/>
+    <ApplyTool copyColors="true" name="tool-4" selectInputs="true"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-3" selectInputs="true"/>
+    <Delete/>
+    <BeginBlock/>
+    <SelectManifestation>
+      <polygonVertex at="0 -4 0 -4 0 4"/>
+      <polygonVertex at="0 0 0 0 8 4"/>
+      <polygonVertex at="-8 -4 0 0 0 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="0 -4 0 4 0 4"/>
+      <polygonVertex at="0 0 0 0 8 4"/>
+      <polygonVertex at="0 0 8 4 0 0"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <Hide/>
+    <SelectManifestation>
+      <polygonVertex at="0 -4 0 -4 0 -4"/>
+      <polygonVertex at="-8 -4 0 0 0 0"/>
+      <polygonVertex at="0 0 0 0 -8 -4"/>
+    </SelectManifestation>
+    <Hide/>
+    <BeginBlock/>
+    <SelectManifestation>
+      <polygonVertex at="0 -4 0 -4 0 4"/>
+      <polygonVertex at="0 0 -8 -4 0 0"/>
+      <polygonVertex at="0 0 0 0 8 4"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="0 -4 0 4 0 4"/>
+      <polygonVertex at="-8 -4 0 0 0 0"/>
+      <polygonVertex at="0 0 0 0 8 4"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <Hide/>
+    <ShowHidden/>
+    <setItemColor blue="0" green="160" red="240"/>
+    <AdjustSelectionByClass balls="IGNORE" originLast="true" panels="SELECT" struts="IGNORE"/>
+    <setItemColor blue="0" green="160" red="240"/>
+    <Snapshot id="15"/>
+    <SelectAll originLast="true"/>
+    <BookmarkTool name="tool-8"/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-6" selectInputs="true"/>
+    <ApplyTool copyColors="true" name="tool-1" selectInputs="true"/>
+    <ApplyTool copyColors="true" name="tool-3" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation>
+      <polygonVertex at="0 -4 0 4 0 4"/>
+      <polygonVertex at="-8 -4 0 0 0 0"/>
+      <polygonVertex at="0 0 0 0 8 4"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="0 -4 0 -4 0 4"/>
+      <polygonVertex at="0 0 0 0 8 4"/>
+      <polygonVertex at="-8 -4 0 0 0 0"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <Hide/>
+    <SelectManifestation>
+      <polygonVertex at="4 2 0 2 4 2"/>
+      <polygonVertex at="0 2 4 2 4 2"/>
+      <polygonVertex at="0 -2 4 2 4 2"/>
+      <polygonVertex at="-4 -2 0 2 4 2"/>
+      <polygonVertex at="-4 -2 0 -2 4 2"/>
+      <polygonVertex at="0 -2 -4 -2 4 2"/>
+      <polygonVertex at="0 2 -4 -2 4 2"/>
+      <polygonVertex at="4 2 0 -2 4 2"/>
+    </SelectManifestation>
+    <Hide/>
+    <ShowHidden/>
+    <DeselectAll/>
+    <ApplyTool copyColors="true" name="tool-7" selectInputs="true"/>
+    <BeginBlock/>
+    <DeselectAll/>
+    <SelectManifestation>
+      <polygonVertex at="0 -4 0 4 0 4"/>
+      <polygonVertex at="-8 -4 0 0 0 0"/>
+      <polygonVertex at="0 0 0 0 8 4"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="0 -4 0 4 0 4"/>
+      <polygonVertex at="0 0 0 0 8 4"/>
+      <polygonVertex at="0 0 8 4 0 0"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="0 -4 0 -4 0 4"/>
+      <polygonVertex at="0 0 0 0 8 4"/>
+      <polygonVertex at="-8 -4 0 0 0 0"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <Hide/>
+    <BeginBlock/>
+    <SelectManifestation>
+      <polygonVertex at="-4 -2 0 -2 4 2"/>
+      <polygonVertex at="-4 -2 0 2 4 2"/>
+      <polygonVertex at="-4 -2 4 2 0 2"/>
+      <polygonVertex at="-4 -2 4 2 0 -2"/>
+      <polygonVertex at="-4 -2 0 2 -4 -2"/>
+      <polygonVertex at="-4 -2 0 -2 -4 -2"/>
+      <polygonVertex at="-4 -2 -4 -2 0 -2"/>
+      <polygonVertex at="-4 -2 -4 -2 0 2"/>
+    </SelectManifestation>
+    <SelectManifestation>
+      <polygonVertex at="4 2 0 2 4 2"/>
+      <polygonVertex at="0 2 4 2 4 2"/>
+      <polygonVertex at="0 -2 4 2 4 2"/>
+      <polygonVertex at="-4 -2 0 2 4 2"/>
+      <polygonVertex at="-4 -2 0 -2 4 2"/>
+      <polygonVertex at="0 -2 -4 -2 4 2"/>
+      <polygonVertex at="0 2 -4 -2 4 2"/>
+      <polygonVertex at="4 2 0 -2 4 2"/>
+    </SelectManifestation>
+    <EndBlock/>
+    <Hide/>
+    <ShowHidden/>
+    <DeselectAll/>
   </EditHistory>
   <notes>
     <page snapshot="12" title="Edges">
@@ -1107,7 +1228,7 @@
       </ViewModel>
       <content xml:space="preserve"/>
     </page>
-    <page snapshot="10" title="Dual Faces">
+    <page snapshot="15" title="Dual Faces">
       <ViewModel distance="115.454833984375" far="230.90966796875" near="0.10690263658761978" parallel="true" stereoAngle="0.0" width="51.95466995239258">
         <LookAtPoint x="0.0" y="0.0" z="0.0"/>
         <UpDirection x="0.0" y="1.0" z="0.0"/>
@@ -1148,8 +1269,8 @@
   <Viewing>
     <ViewModel distance="115.454833984375" far="230.90966796875" near="0.10690263658761978" parallel="true" stereoAngle="0.0" width="51.95466995239258">
       <LookAtPoint x="0.0" y="0.0" z="0.0"/>
-      <UpDirection x="0.0" y="1.0" z="0.0"/>
-      <LookDirection x="0.0" y="0.0" z="-1.0"/>
+      <UpDirection x="-1.571477041579783E-4" y="1.0" z="-4.5464467257261276E-4"/>
+      <LookDirection x="-0.012220748700201511" y="-4.565214621834457E-4" z="-0.999924898147583"/>
     </ViewModel>
   </Viewing>
   <SymmetrySystem name="octahedral" renderingStyle="small octahedra">
@@ -1174,9 +1295,10 @@
     <Tool copyColors="true" deleteInputs="false" id="tool-1" label="cube faces" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" id="tool-2" label="cube edges" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" id="tool-3" label="Dual edges" selectInputs="true"/>
-    <Tool copyColors="true" deleteInputs="false" id="tool-4" label="Dual Edges and faces" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-4" label="Dual Edges and faces" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" hidden="true" id="tool-5" label="bookmark 5" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" id="tool-6" label="Cube edges" selectInputs="true"/>
     <Tool copyColors="true" deleteInputs="false" id="tool-7" label="Truncated cube" selectInputs="true"/>
+    <Tool copyColors="true" deleteInputs="false" id="tool-8" label="Dual Faces" selectInputs="true"/>
   </Tools>
 </vzome:vZome>
