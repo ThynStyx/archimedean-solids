@@ -397,7 +397,7 @@ for (const asolid of models) {
   tr.addEventListener("click", () => selectArchimedeanSolid( asolid, tr ) );
 }
 
-var initialId = 1;
+var initialId = 11;
 let aId = parseInt(searchParams.get("A")); // upper case
 if(Number.isNaN(aId)) {
 	aId = parseInt(searchParams.get("a")); // lower case
