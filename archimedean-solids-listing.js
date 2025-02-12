@@ -178,6 +178,22 @@ function standardizeCamera(camera, distance) {
     camera.lookDirection.y = 0;
     camera.lookDirection.z = -1;
     
+	// I'm not sure that we need to set all of the RV (RealVector) equivalents, but just in case...
+    camera.lookAtPointRV.x = 0.0;
+    camera.lookAtPointRV.y = 0.0;
+    camera.lookAtPointRV.z = 0.0;
+    camera.lookAtPointRV.zero = true;
+
+    camera.upDirectionRV.x = 0.0;
+    camera.upDirectionRV.y = 1.0;
+    camera.upDirectionRV.z = 0.0;
+    camera.upDirectionRV.zero = false;
+	
+    camera.lookDirectionRV.x = 0.0;
+    camera.lookDirectionRV.y = 0.0;
+    camera.lookDirectionRV.z = -1.0;
+    camera.lookDirectionRV.zero = false;
+    
 	// don't need to return the camera because it's passed by reference and updated in situ
 }
 

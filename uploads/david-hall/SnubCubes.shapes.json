@@ -493,16 +493,16 @@
     "stereo": false,
     "farClipDistance": 76.25523099555795,
     "lookDirectionRV": {
-      "x": -0.1017915,
-      "y": -0.13593954,
-      "z": -0.9854742,
+      "x": 0,
+      "y": 0,
+      "z": -1,
       "zero": false
     },
     "viewDistance": 38.127615497778976,
     "upDirectionRV": {
-      "x": -0.07209975,
-      "y": 0.98902166,
-      "z": -0.12898147,
+      "x": 0,
+      "y": 1,
+      "z": 0,
       "zero": false
     },
     "fieldOfView": 28.072486935852954,
