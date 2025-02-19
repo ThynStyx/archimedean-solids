@@ -27,12 +27,12 @@ shapeColors.set( 8, "#DC4C00"); // orange strut
 shapeColors.set(10, "#6C00C6"); // purple strut
 
 // include a case sensitive "download=true" query param in the URL to make the ID in the viewer become the .shapes.json download link
-if(searchParams.get("download") == "true") {
+if(searchParams.has("download")) {
 	document.getElementById( "index" ).addEventListener( "click", downloadShapesJson );
 }
 
-// include a case sensitive "showAnyEdges=true" query param in the URL to make the checkbox remain visible and functional
-const showAnyEdges = searchParams.get("showAnyEdges") == "true";
+// include a case sensitive "showAnyEdges" query param in the URL to make the checkbox remain visible and functional
+const showAnyEdges = searchParams.has("showAnyEdges");
 document.getElementById( "labelForShowEdges" ).textContent = "Show " + (showAnyEdges ? "Edges" : "Zometool");
 
 // https://medium.com/charisol-community/downloading-resources-in-html5-a-download-may-not-work-as-expected-bf63546e2baa
@@ -347,18 +347,11 @@ function getFaceSceneSnapshots(modelData) {
 	const url = viewer.src;
 	const facescenes = [];
 	for(const model of models) {
-		// Oncce all of the Archemedean solids have their Catalin duals working, I will remove this "skip" code 
-		const skip = model.skip == "true";
 		if(model.url == url) {
-			if(skip) {
-				console.log("Skipping 'Dual' and 'Combined' facescenes for " + model.title + ". (" + model.catalan + ")" );
-			}
 			facescenes.push(model.facescene);
-			if(!skip) {
-				// Include these two hard coded variants for the Catalans
-				facescenes.push("Dual " + model.facescene);
-				facescenes.push("Combined " + model.facescene);
-			}
+			// Include these two hard coded variants for the Catalans
+			facescenes.push("Dual " + model.facescene);
+			facescenes.push("Combined " + model.facescene);
 			if(model.field.toLowerCase().startsWith("snub")) {
 				// For Archimedean snub fields, 
 				// The edgescene is supposed to have the chiral twin of facescene instead of struts
