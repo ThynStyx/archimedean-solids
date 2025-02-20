@@ -19,13 +19,15 @@
 
   <meta name="keywords" content="geometry,zome,vzome,Archimedean solids"/>
   
-  <meta property="og:image"  content="/archimedean-solids/Card-image.png"/>
-  <meta name="twitter:image" content="/archimedean-solids/Card-image.png"/>
-  <meta property="og:url" content="https://ThynStyx.github.io/archimedean-solids/"/>
-  <link rel="canonical"      href="https://ThynStyx.github.io/archimedean-solids/">
-  <link rel="shortcut icon" type="image/x-icon" href="/archimedean-solids/favicon.ico">
+  <meta property="og:image"  content="./Card-image.png"/>
+  <meta name="twitter:image" content="./Card-image.png"/>
+  <meta property="og:url"    content="https://ThynStyx.github.io/archimedean-solids/"/>
+  <link rel="canonical"         href="https://ThynStyx.github.io/archimedean-solids/">
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
   <!-- Enable the vzome-viewer custom element -->
   <script type="module" src="https://www.vzome.com/modules/vzome-viewer.js"></script>
+  <!-- Enable the vzome-post-processor custom element -->
+  <script type="module" src="./vzome-post-processor.js"></script>
 
   <!-- populate the table and hook the click events -->
   <script type="module" src="./archimedean-solids-listing.js" ></script>
@@ -81,7 +83,7 @@
           <div id="index"></div>
       </h1>
       <div id="zome-switch" class="no-zome">
-        <label id="labelForShowEdges"" for="showEdges"></label>
+        <label id="labelForShowEdges" for="showEdges"></label>
         <input type="checkbox" id="showEdges">
       </div>
       <div id="snub-switch" class="no-snub">
@@ -96,7 +98,7 @@
         References
       </h2>													 
       <ul>
-	<li><a href="./README.html" target="_blank" rel="noopener">Readme page</a></li>    
+	      <li><a href="./README.html" target="_blank" rel="noopener">Readme page</a></li>    
         <li><a href="https://github.com/ThynStyx/archimedean-solids" target="_blank" rel="noopener">GitHub source</a></li>
         <li><a href="https://vzome.com" target="_blank" rel="noopener">vZome</a></li>
         <li><a href="https://en.wikipedia.org/wiki/Archimedean_solid" target="_blank" rel="noopener">Wikipedia</a></li>
@@ -105,11 +107,6 @@
     </div>
   </div>
 	
-  <div class="download">
-    <p>
-      <a id="download" target="_blank" rel="noopener" href="" download="">Download .shapes.json</a>
-    </p> 
-  </div>
-
+  <vzome-post-processor id="post-processor"/>
 </body>
 </html>
